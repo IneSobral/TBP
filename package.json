@@ -1,0 +1,18 @@
+{
+	"name": "xdesign",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch:css": "postcss src/input.css -o dist/style.css -w",
+		"build:css": "postcss src/input.css -o dist/style.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^10.4.14",
+		"postcss": "^8.4.23",
+		"postcss-cli": "^10.1.0",
+		"precss": "^4.0.0"
+	}
+}

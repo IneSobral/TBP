@@ -1,0 +1,400 @@
+@font-face {
+	font-family: 'archiaregular';
+	src: url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.eot');
+	src: url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.woff2')
+			format('woff2'),
+		url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.woff')
+			format('woff'),
+		url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.ttf')
+			format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--dark-blue: #221e27;
+	--purple: #8764e6;
+	--white: #fff;
+	--orange: #ed860d;
+}
+
+.btn-menu {
+	border: 2px solid #8764e6;
+	border: 2px solid var(--purple);
+	padding: 15px 25px;
+	border-radius: 60px;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: 'archiaregular', 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #fff;
+}
+
+body {
+	background-color: #221e27;
+	background-color: var(--dark-blue);
+	margin: 0;
+}
+/* Nav Menu */
+
+nav {
+	width: 100%;
+	z-index: 5
+}
+
+nav .nav-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		margin: 3.3rem 0;
+		position: relative
+	}
+
+nav .nav-container .nav-left {
+			width: 50%;
+			padding-left: 1rem;
+			display: flex;
+			transition: margin-left 0.5s ease-in-out;
+		}
+
+nav .nav-container .nav-logo {
+			padding-right: 1rem
+		}
+
+nav .nav-container .nav-logo img {
+				width: 85px !important;
+				height: 24px;
+			}
+
+nav .nav-container .icons {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			list-style: none
+		}
+
+nav .nav-container .icons li a {
+				margin: 0.2rem 0.2rem;
+			}
+
+nav .nav-container .icons li a:hover svg {
+				fill: #8764e6;
+				fill: var(--purple);
+			}
+
+nav .nav-container .icons li a:hover svg rect {
+				stroke: #fff;
+				stroke: var(--white);
+			}
+
+nav .nav-container .icons li a:hover svg path {
+				fill: #fff;
+				fill: var(--white);
+			}
+
+nav .nav-container {
+		/* Navbar Mobile */
+	}
+
+nav .nav-container .menu-desktop {
+			display: none;
+		}
+
+nav .nav-container .menu-mobile {
+			display: none;
+		}
+
+nav .nav-container .nav-left.active {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: auto;
+			margin-left: calc(30% - 30px);
+			transition: margin-left 0.5s ease-in-out
+		}
+
+nav .nav-container .nav-left.active .icons {
+				display: none;
+			}
+
+nav .nav-container .menu-mobile.active {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			grid-gap: 2rem;
+			gap: 2rem;
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 2.5rem;
+			left: 0;
+			list-style: none;
+			padding-top: 8rem;
+			background-color: #221e27;
+			background-color: var(--dark-blue);
+			z-index: 5
+		}
+
+nav .nav-container .menu-mobile.active .nav-drop-item {
+				background-color: #221e27;
+			}
+
+nav .nav-container .menu-mobile.active .nav-drop-item a {
+				text-decoration: none;
+				color: #fff;
+				color: var(--white);
+				font-size: 16px;
+			}
+
+nav .nav-container .menu-mobile.active .nav-drop-item a:hover {
+				color: #8764e6;
+				color: var(--purple);
+			}
+
+nav .nav-container .menu-mobile.active .nav-language_container {
+				font-size: 18px;
+				padding-top: 2rem;
+			}
+
+nav .nav-container .menu-mobile.active .icons-mobile {
+				padding-top: 2rem;
+				grid-gap: 0;
+				gap: 0;
+			}
+
+nav .nav-container {
+		/* HAMBURGER MENU */
+	}
+
+nav .nav-container .hamburger-menu {
+			margin-right: 1.3rem
+		}
+
+nav .nav-container .hamburger-menu .menu-toggle {
+				display: inline-block;
+				cursor: pointer;
+				width: 30px;
+				height: 20px;
+				position: relative
+			}
+
+nav .nav-container .hamburger-menu .menu-toggle .line {
+					width: 100%;
+					height: 2px;
+					position: absolute;
+					top: 0px;
+					background-color: #fff;
+					background-color: var(--white);
+					margin: 5px 0;
+					border-radius: 5px;
+					transition: transform 0.5s ease 0s, top 0.5s ease 0s
+				}
+
+nav .nav-container .hamburger-menu .menu-toggle .line:nth-child(2) {
+						top: 7px;
+					}
+
+nav .nav-container .hamburger-menu .menu-toggle .line:nth-child(3) {
+						top: 14px;
+					}
+
+nav .nav-container .hamburger-menu .menu-toggle .line {
+					/* Rotate the middle line to create a cross shape */
+				}
+
+nav .nav-container .hamburger-menu .menu-toggle .line:nth-child(2) {
+						transform-origin: center;
+						transition: transform 0.5s ease 0.2s;
+					}
+
+nav .nav-container {
+		/* Navbar Desktop */
+	}
+
+@media (min-width: 1350px) {
+			nav .nav-container .hamburger-menu {
+				display: none;
+			}
+
+			nav .nav-container .nav-container {
+				margin: 0.5rem 0;
+			}
+
+			nav .nav-container .nav-left {
+				width: 50%;
+				padding-left: 3rem;
+				display: flex;
+				margin-left: 3rem;
+			}
+			nav .nav-container .menu-desktop {
+				width: 65%;
+				padding-right: 5rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				list-style: none;
+				grid-gap: 1rem;
+				gap: 1rem;
+				white-space: nowrap
+			}
+
+				nav .nav-container .menu-desktop heading-menu {
+					position: relative;
+				}
+				nav .nav-container .menu-desktop .heading-menu a {
+					text-decoration: none;
+					color: #fff;
+					color: var(--white);
+					font-size: 17px;
+					line-height: 20px;
+					transition: color 0.3s ease;
+					letter-spacing: 1px;
+				}
+				nav .nav-container .menu-desktop .heading-menu a:hover {
+					color: #8764e6;
+					color: var(--purple);
+				}
+
+				nav .nav-container .menu-desktop .submenu {
+					list-style: none;
+					display: none;
+					flex-direction: row;
+					grid-gap: 1.3rem;
+					gap: 1.3rem;
+					position: absolute;
+					top: 10px;
+					padding-top: 2rem;
+				}
+				nav .nav-container .menu-desktop .heading-menu:hover .submenu {
+					display: flex;
+				}
+				nav .nav-container .menu-desktop .btn-menu {
+					color: #8764e6;
+					color: var(--purple)
+				}
+
+					nav .nav-container .menu-desktop .btn-menu .new-btn {
+						border: 2px solid #ed860d;
+						border-radius: 100px;
+						font-weight: 400;
+						font-size: 13px;
+						line-height: 19px;
+						text-align: center;
+						letter-spacing: 1px;
+						width: 65px;
+						height: 25px;
+						color: #ed860d;
+						color: var(--orange);
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						margin-left: 10px;
+					}
+		}
+
+@media screen and (min-width: 850px) and (max-width: 1349px) {
+	.nav-container {
+		padding-right: 2rem;
+	}
+	.nav-left {
+		margin-left: 3rem;
+	}
+}
+/* Nav Language PT/EN + hover effect */
+.nav-language_container a {
+	text-decoration: none;
+}
+.nav-language_container a:nth-child(1) {
+	color: #8764e6;
+	color: var(--purple);
+}
+.nav-language_container a:nth-child(1)::after {
+	content: '|';
+	margin: 0 8px;
+	color: #fff;
+	color: var(--white);
+}
+.nav-language_container a:nth-child(2) {
+	color: #fff;
+	color: var(--white);
+}
+.nav-language_container a:nth-child(2):hover {
+	color: #8764e6;
+	color: var(--purple);
+}
+
+/* Active Menu - animation */
+.hamburger-menu.active .menu-toggle .line:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-menu.active .menu-toggle .line:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+.hamburger-menu.active .menu-toggle .line:nth-child(2) {
+	opacity: 0;
+}
+
+/* Home Section */
+.home {
+	text-align: center
+}
+.home .home-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		height: calc(100vh - 8.75rem);
+		position: relative
+	}
+.home .home-container img {
+			max-width: 100%;
+			height: auto;
+		}
+.home .home-container .home-container_info {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%
+		}
+.home .home-container .home-container_info h1 {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 40px;
+				line-height: 120%;
+			}
+.home .home-container .home-container_info h3 {
+				padding-top: 0.7rem;
+				font-weight: 400;
+				font-size: 16px;
+			}
+.home .home-container {
+
+		/* HOME SECTION Desktop */
+	}
+@media (min-width: 1350px) {
+.home .home-container {
+	}
+		}
