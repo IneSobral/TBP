@@ -143,6 +143,10 @@ nav {
 			& .nav-language_container {
 				font-size: 18px;
 				padding-top: 2rem;
+
+				& a.active {
+					color: var(--purple);
+				}
 			}
 			& .icons-mobile {
 				padding-top: 2rem;
@@ -221,9 +225,6 @@ nav {
 					transition: color 0.3s ease;
 					letter-spacing: 1px;
 				}
-				& .heading-menu a:hover {
-					color: var(--purple);
-				}
 
 				& .submenu {
 					list-style: none;
@@ -274,7 +275,7 @@ nav {
 .nav-language_container a {
 	text-decoration: none;
 }
-.nav-language_container a:nth-child(1) {
+.nav-language_container a span.active {
 	color: var(--purple);
 }
 .nav-language_container a:nth-child(1)::after {
@@ -282,10 +283,10 @@ nav {
 	margin: 0 8px;
 	color: var(--white);
 }
-.nav-language_container a:nth-child(2) {
+.nav-language_container a {
 	color: var(--white);
 }
-.nav-language_container a:nth-child(2):hover {
+.nav-language_container a:hover {
 	color: var(--purple);
 }
 
@@ -396,69 +397,5 @@ nav {
 				color: var(--purple);
 			}
 		}
-	}
-}
-/* Why Section - Desktop */
-@media (min-width: 951px) {
-	.why-section {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 5rem;
-		max-width: 1600px;
-		height: 60vh;
-		padding-top: 5rem;
-		padding-left: 7rem;
-		margin: 0 auto;
-
-		& .column {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 1rem;
-
-			& h2 {
-				font-size: 2.2rem;
-				line-height: 43px;
-				font-weight: 100;
-			}
-			& p {
-				font-size: 16px;
-				line-height: 30px;
-				letter-spacing: 1px;
-				font-weight: 100;
-			}
-			& ul {
-				list-style: none;
-
-				& li {
-					margin-bottom: 40px;
-				}
-			}
-			& a {
-				display: flex;
-				align-items: center;
-				text-decoration: none;
-
-				& span {
-					margin-left: 15px;
-					font-size: 18px;
-					font-weight: 500;
-					color: var(--purple);
-				}
-			}
-		}
-		& .why-our_products,
-		& .why-expertise {
-			padding-left: 2rem;
-		}
-	}
-}
-@media screen and (min-width: 761px) and (max-width: 950px) {
-	.why-section {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
-	}
-	.why-team {
-		grid-column: 1 / span 2;
 	}
 }

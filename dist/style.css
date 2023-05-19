@@ -167,8 +167,13 @@ nav .nav-container .menu-mobile.active .nav-drop-item a:hover {
 
 nav .nav-container .menu-mobile.active .nav-language_container {
 				font-size: 18px;
-				padding-top: 2rem;
+				padding-top: 2rem
 			}
+
+nav .nav-container .menu-mobile.active .nav-language_container a.active {
+					color: #8764e6;
+					color: var(--purple);
+				}
 
 nav .nav-container .menu-mobile.active .icons-mobile {
 				padding-top: 2rem;
@@ -264,10 +269,6 @@ nav .nav-container {
 					transition: color 0.3s ease;
 					letter-spacing: 1px;
 				}
-				nav .nav-container .menu-desktop .heading-menu a:hover {
-					color: #8764e6;
-					color: var(--purple);
-				}
 
 				nav .nav-container .menu-desktop .submenu {
 					list-style: none;
@@ -318,7 +319,7 @@ nav .nav-container {
 .nav-language_container a {
 	text-decoration: none;
 }
-.nav-language_container a:nth-child(1) {
+.nav-language_container a span.active {
 	color: #8764e6;
 	color: var(--purple);
 }
@@ -328,11 +329,11 @@ nav .nav-container {
 	color: #fff;
 	color: var(--white);
 }
-.nav-language_container a:nth-child(2) {
+.nav-language_container a {
 	color: #fff;
 	color: var(--white);
 }
-.nav-language_container a:nth-child(2):hover {
+.nav-language_container a:hover {
 	color: #8764e6;
 	color: var(--purple);
 }
