@@ -39,7 +39,6 @@
 
 html {
 	font-family: 'archiaregular', 'Roboto', sans-serif;
-	font-weight: 300;
 	color: #fff;
 }
 
@@ -277,8 +276,8 @@ nav .nav-container {
 					grid-gap: 1.3rem;
 					gap: 1.3rem;
 					position: absolute;
-					top: 10px;
-					padding-top: 2rem;
+					top: 15px;
+					padding-top: 2.8rem;
 				}
 				nav .nav-container .menu-desktop .heading-menu:hover .submenu {
 					display: flex;
@@ -390,11 +389,129 @@ nav .nav-container {
 				font-weight: 400;
 				font-size: 16px;
 			}
-.home .home-container {
 
-		/* HOME SECTION Desktop */
+/* Why Section */
+
+.why-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 3rem;
+	gap: 3rem;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	margin-bottom: 1rem
+}
+
+.why-section .column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		grid-gap: 2rem;
+		gap: 2rem
 	}
-@media (min-width: 1350px) {
-.home .home-container {
-	}
+
+.why-section .column h2 {
+			font-size: 24px;
+			line-height: 19px;
+			font-weight: 300;
+			letter-spacing: 1px;
+			padding-bottom: 0.5rem;
 		}
+
+.why-section .column p {
+			font-size: 14px;
+			line-height: 19px;
+			letter-spacing: 1px;
+			font-weight: 200;
+		}
+
+.why-section .column ul {
+			list-style: none
+		}
+
+.why-section .column ul li {
+				margin-bottom: 30px;
+				letter-spacing: 1px;
+			}
+
+.why-section .column a {
+			display: flex;
+			align-items: center;
+			text-decoration: none
+		}
+
+.why-section .column a span {
+				margin-left: 15px;
+				font-size: 17px;
+				font-weight: 500;
+				color: #8764e6;
+				color: var(--purple);
+			}
+/* Why Section - Desktop */
+@media (min-width: 951px) {
+	.why-section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 5rem;
+		gap: 5rem;
+		max-width: 1600px;
+		height: 60vh;
+		padding-top: 5rem;
+		padding-left: 7rem;
+		margin: 0 auto
+	}
+
+		.why-section .column {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			grid-gap: 1rem;
+			gap: 1rem
+		}
+
+			.why-section .column h2 {
+				font-size: 2.2rem;
+				line-height: 43px;
+				font-weight: 100;
+			}
+			.why-section .column p {
+				font-size: 16px;
+				line-height: 30px;
+				letter-spacing: 1px;
+				font-weight: 100;
+			}
+			.why-section .column ul {
+				list-style: none
+			}
+
+				.why-section .column ul li {
+					margin-bottom: 40px;
+				}
+			.why-section .column a {
+				display: flex;
+				align-items: center;
+				text-decoration: none
+			}
+
+				.why-section .column a span {
+					margin-left: 15px;
+					font-size: 18px;
+					font-weight: 500;
+					color: #8764e6;
+					color: var(--purple);
+				}
+		.why-section .why-our_products,
+		.why-section .why-expertise {
+			padding-left: 2rem;
+		}
+}
+@media screen and (min-width: 761px) and (max-width: 950px) {
+	.why-section {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+	.why-team {
+		grid-column: 1 / span 2;
+	}
+}

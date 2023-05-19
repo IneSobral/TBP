@@ -38,7 +38,6 @@
 
 html {
 	font-family: 'archiaregular', 'Roboto', sans-serif;
-	font-weight: 300;
 	color: #fff;
 }
 
@@ -232,8 +231,8 @@ nav {
 					flex-direction: row;
 					gap: 1.3rem;
 					position: absolute;
-					top: 10px;
-					padding-top: 2rem;
+					top: 15px;
+					padding-top: 2.8rem;
 				}
 				& .heading-menu:hover .submenu {
 					display: flex;
@@ -344,9 +343,122 @@ nav {
 				font-size: 16px;
 			}
 		}
+	}
+}
 
-		/* HOME SECTION Desktop */
-		@media (min-width: 1350px) {
+/* Why Section */
+
+.why-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 3rem;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+
+	& .column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2rem;
+
+		& h2 {
+			font-size: 24px;
+			line-height: 19px;
+			font-weight: 300;
+			letter-spacing: 1px;
+			padding-bottom: 0.5rem;
 		}
+		& p {
+			font-size: 14px;
+			line-height: 19px;
+			letter-spacing: 1px;
+			font-weight: 200;
+		}
+		& ul {
+			list-style: none;
+
+			& li {
+				margin-bottom: 30px;
+				letter-spacing: 1px;
+			}
+		}
+		& a {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+
+			& span {
+				margin-left: 15px;
+				font-size: 17px;
+				font-weight: 500;
+				color: var(--purple);
+			}
+		}
+	}
+}
+/* Why Section - Desktop */
+@media (min-width: 951px) {
+	.why-section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 5rem;
+		max-width: 1600px;
+		height: 60vh;
+		padding-top: 5rem;
+		padding-left: 7rem;
+		margin: 0 auto;
+
+		& .column {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+
+			& h2 {
+				font-size: 2.2rem;
+				line-height: 43px;
+				font-weight: 100;
+			}
+			& p {
+				font-size: 16px;
+				line-height: 30px;
+				letter-spacing: 1px;
+				font-weight: 100;
+			}
+			& ul {
+				list-style: none;
+
+				& li {
+					margin-bottom: 40px;
+				}
+			}
+			& a {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+
+				& span {
+					margin-left: 15px;
+					font-size: 18px;
+					font-weight: 500;
+					color: var(--purple);
+				}
+			}
+		}
+		& .why-our_products,
+		& .why-expertise {
+			padding-left: 2rem;
+		}
+	}
+}
+@media screen and (min-width: 761px) and (max-width: 950px) {
+	.why-section {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+	.why-team {
+		grid-column: 1 / span 2;
 	}
 }
