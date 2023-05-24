@@ -1,34 +1,29 @@
+/*
+
+
 document.addEventListener('DOMContentLoaded', function () {
 	const hamburgerMenu = document.querySelector('.hamburger-menu');
 	const mobileMenu = document.querySelector('.menu-mobile');
 	const navMenu = document.querySelector('.nav-left');
 
-	// Toggle the active class on click
 	hamburgerMenu.addEventListener('click', function () {
 		this.classList.toggle('active');
 		mobileMenu.classList.toggle('active');
 		navMenu.classList.toggle('active');
 	});
 
-	// Get the language links
 	const languageLinks = document.querySelectorAll('.nav-language a');
-	const linkColor = document.querySelector('.nav-language_container a span');
+	const enLink = languageLinks[0];
+	const ptLink = languageLinks[1];
 
-	// Loop through each language link
+	// Set initial state
+	enLink.classList.add('selected');
+
 	languageLinks.forEach(function (link) {
-		// Add a click event listener to each link
 		link.addEventListener('click', function (event) {
-			event.preventDefault(); // Prevent the default link behavior
+			event.preventDefault();
 
-			// Get the target language from the clicked link
 			const targetLanguage = link.innerText.trim();
-
-			// Change the color of the clicked link
-			languageLinks.forEach(function (l) {
-				l.classList.remove('active'); // Remove the 'active' class from all links
-			});
-			link.classList.add('active');
-			linkColor.classList.add('active');
 
 			let targetPage = '';
 			if (targetLanguage === 'EN') {
@@ -37,27 +32,258 @@ document.addEventListener('DOMContentLoaded', function () {
 				targetPage = 'index-' + targetLanguage.toLowerCase() + '.html';
 			}
 
-			document.getElementById('content').innerHTML = ''; // Clear the existing content (optional)
+			document.getElementById('content').innerHTML = '';
 			fetch(targetPage)
 				.then((response) => response.text())
 				.then((data) => {
-					document.getElementById('content').innerHTML = data; // Update the content with the new page
+					document.getElementById('content').innerHTML = data;
 
-					// Re-assign the hamburger menu and mobile menu elements
 					const hamburgerMenu = document.querySelector('.hamburger-menu');
 					const mobileMenu = document.querySelector('.menu-mobile');
 					const navMenu = document.querySelector('.nav-left');
 
-					// Toggle the active class on click
 					hamburgerMenu.addEventListener('click', function () {
 						this.classList.toggle('active');
 						mobileMenu.classList.toggle('active');
 						navMenu.classList.toggle('active');
 					});
+
+					const languageSpans = document.querySelectorAll('.nav-language span');
+
+					languageLinks.forEach(function (link) {
+						link.addEventListener('click', function () {
+							languageLinks.forEach(function (l) {
+								l.classList.remove('active');
+							});
+							link.classList.add('active');
+						});
+					});
+
+					// Set initial state of language links and spans
+					if (targetLanguage === 'PT') {
+						languageLinks.forEach(function (l) {
+							l.classList.remove('active');
+						});
+						ptLink.classList.add('selected');
+						languageSpans.forEach(function (span) {
+							span.style.color =
+								span.innerText.trim() === 'PT'
+									? 'var(--purple)'
+									: 'var(--white)';
+						});
+					}
 				})
 				.catch((error) => {
 					console.log('Error:', error);
 				});
 		});
 	});
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	const hamburgerMenu = document.querySelector('.hamburger-menu');
+	const mobileMenu = document.querySelector('.menu-mobile');
+	const navMenu = document.querySelector('.nav-left');
+
+	hamburgerMenu.addEventListener('click', function () {
+		this.classList.toggle('active');
+		mobileMenu.classList.toggle('active');
+		navMenu.classList.toggle('active');
+	});
+
+	const languageLinks = document.querySelectorAll('.nav-language a');
+	const enLink = languageLinks[0];
+	const ptLink = languageLinks[1];
+
+	// Set initial state
+	enLink.classList.add('selected');
+
+	languageLinks.forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+
+			const targetLanguage = link.innerText.trim();
+
+			let targetPage = '';
+
+			if (targetLanguage === 'EN') {
+				if (window.location.pathname.includes('stack')) {
+					targetPage = '/en/stack.html';
+				} else if (window.location.pathname.includes('work')) {
+					targetPage = '/en/work.html';
+				} else if (window.location.pathname.includes('plans')) {
+					targetPage = '/en/plans.html';
+				} else if (window.location.pathname.includes('contact')) {
+					targetPage = '/en/contact.html';
+				} else if (window.location.pathname.includes('wp')) {
+					targetPage = '/en/wp-performance.html';
+				} else {
+					targetPage = 'index.html';
+				}
+			} else {
+				if (window.location.pathname.includes('stack')) {
+					targetPage = '/pt/stack-pt.html';
+				} else if (window.location.pathname.includes('work')) {
+					targetPage = '/pt/work-pt.html';
+				} else if (window.location.pathname.includes('plans')) {
+					targetPage = '/pt/plans-pt.html';
+				} else if (window.location.pathname.includes('contact')) {
+					targetPage = '/pt/contact-pt.html';
+				} else if (window.location.pathname.includes('wp')) {
+					targetPage = '/pt/wp-performance-pt.html';
+				} else {
+					targetPage = 'index-' + targetLanguage.toLowerCase() + '.html';
+				}
+			}
+
+			document.getElementById('content').innerHTML = '';
+			fetch(targetPage)
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById('content').innerHTML = data;
+					initializePage();
+				})
+				.catch((error) => {
+					console.log('Error:', error);
+				});
+		});
+	});
+
+	// Function to initialize the page after content is loaded
+	function initializePage() {
+		hamburgerMenu.addEventListener('click', function () {
+			this.classList.toggle('active');
+			mobileMenu.classList.toggle('active');
+			navMenu.classList.toggle('active');
+		});
+
+		const languageSpans = document.querySelectorAll('.nav-language span');
+
+		languageLinks.forEach(function (link) {
+			link.addEventListener('click', function () {
+				languageLinks.forEach(function (l) {
+					l.classList.remove('active');
+				});
+				link.classList.add('active');
+			});
+		});
+
+		// Set initial state of language links and spans
+		const targetLanguage = languageLinks[1].innerText.trim();
+		if (targetLanguage === 'PT') {
+			languageLinks.forEach(function (l) {
+				l.classList.remove('active');
+			});
+			ptLink.classList.add('selected');
+			languageSpans.forEach(function (span) {
+				span.style.color =
+					span.innerText.trim() === 'PT' ? 'var(--purple)' : 'var(--white)';
+			});
+		}
+	}
+});
+*/
+
+document.addEventListener('DOMContentLoaded', function () {
+	const hamburgerMenu = document.querySelector('.hamburger-menu');
+	const mobileMenu = document.querySelector('.menu-mobile');
+	const navMenu = document.querySelector('.nav-left');
+
+	hamburgerMenu.addEventListener('click', function () {
+		this.classList.toggle('active');
+		mobileMenu.classList.toggle('active');
+		navMenu.classList.toggle('active');
+	});
+
+	const languageLinks = document.querySelectorAll('.nav-language a');
+	const enLink = languageLinks[0];
+	const ptLink = languageLinks[1];
+
+	// Set initial state
+	enLink.classList.add('selected');
+
+	languageLinks.forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+
+			const targetLanguage = link.innerText.trim();
+
+			let targetPage = '';
+
+			if (targetLanguage === 'EN') {
+				if (window.location.pathname.includes('stack')) {
+					targetPage = '/en/stack.html';
+				} else if (window.location.pathname.includes('work')) {
+					targetPage = '/en/work.html';
+				} else if (window.location.pathname.includes('plans')) {
+					targetPage = '/en/plans.html';
+				} else if (window.location.pathname.includes('contact')) {
+					targetPage = '/en/contact.html';
+				} else if (window.location.pathname.includes('wp')) {
+					targetPage = '/en/wp-performance.html';
+				} else {
+					targetPage = 'index.html';
+				}
+			} else {
+				if (window.location.pathname.includes('stack')) {
+					targetPage = '/pt/stack-pt.html';
+				} else if (window.location.pathname.includes('work')) {
+					targetPage = '/pt/work-pt.html';
+				} else if (window.location.pathname.includes('plans')) {
+					targetPage = '/pt/plans-pt.html';
+				} else if (window.location.pathname.includes('contact')) {
+					targetPage = '/pt/contact-pt.html';
+				} else if (window.location.pathname.includes('wp')) {
+					targetPage = '/pt/wp-performance-pt.html';
+				} else {
+					targetPage = 'index-pt.html';
+				}
+			}
+
+			document.getElementById('content').innerHTML = '';
+			fetch(targetPage)
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById('content').innerHTML = data;
+					initializePage();
+				})
+				.catch((error) => {
+					console.log('Error:', error);
+				});
+		});
+	});
+
+	// Function to initialize the page after content is loaded
+	function initializePage() {
+		hamburgerMenu.addEventListener('click', function () {
+			this.classList.toggle('active');
+			mobileMenu.classList.toggle('active');
+			navMenu.classList.toggle('active');
+		});
+
+		const languageSpans = document.querySelectorAll('.nav-language span');
+
+		languageLinks.forEach(function (link) {
+			link.addEventListener('click', function () {
+				languageLinks.forEach(function (l) {
+					l.classList.remove('active');
+				});
+				link.classList.add('active');
+			});
+		});
+
+		// Set initial state of language links and spans
+		const targetLanguage = languageLinks[1].innerText.trim();
+		if (targetLanguage === 'PT') {
+			languageLinks.forEach(function (l) {
+				l.classList.remove('active');
+			});
+			ptLink.classList.add('selected');
+			languageSpans.forEach(function (span) {
+				span.style.color =
+					span.innerText.trim() === 'PT' ? 'var(--purple)' : 'var(--white)';
+			});
+		}
+	}
 });
