@@ -2,7 +2,7 @@ const browserLanguage = navigator.language.toLowerCase();
 
 const supportedLanguages = {
 	en: 'index.html',
-	pt: 'pt/index-pt.html',
+	pt: 'index-pt.html',
 };
 
 if (browserLanguage in supportedLanguages) {
@@ -13,19 +13,24 @@ if (browserLanguage in supportedLanguages) {
 // Set the language links' active state based on the current page
 document.addEventListener('DOMContentLoaded', function () {
 	const languageLinks = document.querySelectorAll('.nav-language a span');
+	const languageLinksMobile = document.querySelectorAll(
+		'.menu-mobile .nav-language a span'
+	);
 	const enLink = languageLinks[0];
 	const ptLink = languageLinks[1];
+	const enLinkMobile = languageLinksMobile[0];
+	const ptLinkMobile = languageLinksMobile[1];
 
-	// Get the current page path
 	const currentPath = window.location.pathname;
 	const isPT =
 		currentPath.includes('/pt/') || currentPath.includes('index-pt.html');
 
-	// Set initial state
 	if (isPT) {
 		ptLink.classList.add('selected');
+		ptLinkMobile.classList.add('selected');
 	} else {
 		enLink.classList.add('selected');
+		enLinkMobile.classList.add('selected');
 	}
 
 	languageLinks.forEach(function (link) {
@@ -55,6 +60,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
+	const hamburgerMenu = document.querySelector('.hamburger-menu');
+	const mobileMenu = document.querySelector('.menu-mobile');
+	const navMenu = document.querySelector('.nav-left');
+
+	hamburgerMenu.addEventListener('click', function () {
+		this.classList.toggle('active');
+		mobileMenu.classList.toggle('active');
+		navMenu.classList.toggle('active');
+	});
+
 	let currentPage = window.location.href;
 	let navbarLinks = document.querySelectorAll('.heading-menu a');
 	navbarLinks.forEach(function (link) {
@@ -64,26 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			link.classList.remove('active');
 		}
 	});
-});
-
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const mobileMenu = document.querySelector('.menu-mobile');
-const navMenu = document.querySelector('.nav-left');
-
-hamburgerMenu.addEventListener('click', function () {
-	this.classList.toggle('active');
-	mobileMenu.classList.toggle('active');
-	navMenu.classList.toggle('active');
-});
-
-let currentPage = window.location.href;
-let navbarLinks = document.querySelectorAll('.heading-menu a');
-navbarLinks.forEach(function (link) {
-	if (link.href === currentPage) {
-		link.classList.add('active');
-	} else {
-		link.classList.remove('active');
-	}
 });
 
 // Filter Single Projets
