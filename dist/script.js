@@ -287,3 +287,53 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 });
+
+// Filter Single Projets
+
+(function () {
+	const filterButtons = document.querySelectorAll('.filter-portfolio .btn');
+	console.log(filterButtons);
+	const itemList = document.querySelector('.portfolio');
+
+	filterButtons.forEach((button) => {
+		button.addEventListener('click', filterItems);
+	});
+
+	// Function to filter items based on the selected filter
+	function filterItems() {
+		filterButtons.forEach((button) => {
+			button.classList.remove('active');
+		});
+
+		this.classList.add('active');
+
+		const selectedCategory = this.textContent.trim();
+
+		// Show all items if "All Projects" is selected
+		if (selectedCategory === 'All Projects') {
+			itemList.querySelectorAll('li').forEach((item) => {
+				item.style.display = 'block';
+			});
+		} else {
+			itemList.querySelectorAll('li').forEach((item) => {
+				item.style.display = 'none';
+			});
+
+			const filteredItems = document.querySelectorAll('#filtered-item');
+			filteredItems.forEach((item) => {
+				if (
+					item.classList.contains(
+						selectedCategory.toLowerCase().replace(/\s/g, '-')
+					)
+				) {
+					item.style.display = 'block';
+				}
+			});
+		}
+	}
+
+	itemList.querySelectorAll('li').forEach((item) => {
+		item.style.display = 'block';
+	});
+	filterButtons[0].classList.add('active');
+})();

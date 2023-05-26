@@ -14,5 +14,8 @@
 		"postcss": "^8.4.23",
 		"postcss-cli": "^10.1.0",
 		"precss": "^4.0.0"
+	},
+	"dependencies": {
+		"glightbox": "^3.2.0"
 	}
 }
