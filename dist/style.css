@@ -190,7 +190,7 @@ nav .nav-container .nav-logo {
 		}
 
 nav .nav-container .nav-logo img {
-				width: 85px !important;
+				width: auto;
 				height: 24px;
 			}
 
@@ -300,12 +300,17 @@ nav .nav-container .menu-mobile.active .nav-language_container a:nth-child(1)::a
 						color: var(--white);
 					}
 
-nav .nav-container .menu-mobile.active .nav-language_container a:nth-child(1) {
+nav .nav-container .menu-mobile.active .nav-language_container a span {
+						color: #fff;
+						color: var(--white);
+					}
+
+nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 						color: #8764e6;
 						color: var(--purple);
 					}
 
-nav .nav-container .menu-mobile.active .nav-language_container a.selected span {
+nav .nav-container .menu-mobile.active .nav-language_container a span.selected {
 						color: #8764e6;
 						color: var(--purple);
 					}
@@ -409,10 +414,12 @@ nav .nav-container {
 						color: #8764e6;
 						color: var(--purple);
 					}
+					nav .nav-container .menu-desktop .heading-menu a.active {
+						color: #8764e6;
+						color: var(--purple);
+					}
 
 				nav .nav-container .menu-desktop .nav-language_container a {
-					color: #fff;
-					color: var(--white);
 					text-decoration: none
 
 					/* Nav Language PT/EN + hover effect */
@@ -423,18 +430,11 @@ nav .nav-container {
 						color: #fff;
 						color: var(--white);
 					}
-
 					nav .nav-container .menu-desktop .nav-language_container a span {
 						color: #fff;
 						color: var(--white);
 					}
-
-					nav .nav-container .menu-desktop .nav-language_container a.selected span {
-						color: #8764e6;
-						color: var(--purple);
-					}
-
-					nav .nav-container .menu-desktop .nav-language_container a:hover {
+					nav .nav-container .menu-desktop .nav-language_container a span.selected {
 						color: #8764e6;
 						color: var(--purple);
 					}
@@ -470,11 +470,6 @@ nav .nav-container {
 	.nav-left {
 		margin-left: 3rem;
 	}
-}
-
-nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
-	color: #8764e6;
-	color: var(--purple);
 }
 
 /* Active Menu - animation */
@@ -1031,6 +1026,11 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 					border-color: var(--purple);
 				}
 /* WP PERFORMANCE SECTION MEDIA QUERY */
+@media (min-width: 992px) and (max-width: 1500px) {
+		.wp-performance_section iframe {
+			width: 420px;
+		}
+}
 
 @media screen and (min-width: 992px) {
 	.wp-performance_section {
@@ -1040,7 +1040,9 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 		width: 100%;
 		grid-gap: 5rem;
 		gap: 5rem;
-		margin-top: 4rem
+		margin-top: 4rem;
+		padding-left: 0;
+		max-width: 90%
 	}
 
 		.wp-performance_section h2 {
@@ -1070,7 +1072,6 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 .contact-info .location {
 		display: flex;
 		align-items: start;
-
 		margin-bottom: 70px
 	}
 
@@ -1079,8 +1080,8 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 			margin-left: 25px
 		}
 
-.contact-info .location ul li {
-				line-height: 160%;
+.contact-info .location ul li + li {
+				margin-top: 0;
 			}
 
 .contact-info .location div {
@@ -1096,6 +1097,25 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 /* CONTACT US SECTION MEDIA QUERY */
 
 @media screen and (min-width: 992px) {
+	.contact-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		grid-gap: 8rem;
+		gap: 8rem;
+		margin: auto;
+		line-height: 160%;
+	}
+
+		.contact-info .contact-mail {
+			margin-left: 2rem
+		}
+
+			.contact-info .contact-mail p {
+				padding-bottom: 0.5rem;
+				line-height: 160%;
+			}
+
 		.contact-info h2 {
 			margin-bottom: 90px;
 		}
@@ -1243,13 +1263,11 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 				margin: 0 auto 12px auto;
 				height: auto;
 			}
-
 @media (min-width: 992px) {
-
-.single-project {
+	.single-project {
 		margin-left: 8rem;
 		margin-bottom: 3rem
-}
+	}
 
 		.single-project h1 {
 			font-size: 2.5rem;
@@ -1257,7 +1275,10 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 		.single-project h2 {
 			font-size: 2rem;
 		}
-	}
+		.single-project .content .main-content footer {
+			text-align: left;
+		}
+}
 /* --------------------------- WP PLANS - Refactor + Store-refactor SECTION ---------------------------- */
 .main-container {
 	margin-left: 2rem;

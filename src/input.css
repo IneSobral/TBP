@@ -179,7 +179,7 @@ nav {
 		& .nav-logo {
 			padding-right: 1rem;
 			& img {
-				width: 85px !important;
+				width: auto;
 				height: 24px;
 			}
 		}
@@ -264,11 +264,13 @@ nav {
 						margin: 0 8px;
 						color: var(--white);
 					}
-					&:nth-child(1) {
+					& span {
+						color: var(--white);
+					}
+					& span:hover {
 						color: var(--purple);
 					}
-
-					&.selected span {
+					& span.selected {
 						color: var(--purple);
 					}
 				}
@@ -354,10 +356,12 @@ nav {
 					&:hover {
 						color: var(--purple);
 					}
+					&.active {
+						color: var(--purple);
+					}
 				}
 
 				& .nav-language_container a {
-					color: var(--white);
 					text-decoration: none;
 
 					/* Nav Language PT/EN + hover effect */
@@ -366,16 +370,10 @@ nav {
 						margin: 0 8px;
 						color: var(--white);
 					}
-
 					& span {
 						color: var(--white);
 					}
-
-					&.selected span {
-						color: var(--purple);
-					}
-
-					&:hover {
+					& span.selected {
 						color: var(--purple);
 					}
 				}
@@ -412,10 +410,6 @@ nav {
 	.nav-left {
 		margin-left: 3rem;
 	}
-}
-
-nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
-	color: var(--purple);
 }
 
 /* Active Menu - animation */
@@ -1005,6 +999,13 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 	}
 }
 /* WP PERFORMANCE SECTION MEDIA QUERY */
+@media (min-width: 992px) and (max-width: 1500px) {
+	.wp-performance_section {
+		& iframe {
+			width: 420px;
+		}
+	}
+}
 
 @media screen and (min-width: 992px) {
 	.wp-performance_section {
@@ -1014,6 +1015,8 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 		width: 100%;
 		gap: 5rem;
 		margin-top: 4rem;
+		padding-left: 0;
+		max-width: 90%;
 
 		& h2 {
 			font-size: 36px;
@@ -1044,15 +1047,14 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 	& .location {
 		display: flex;
 		align-items: start;
-
 		margin-bottom: 70px;
 
 		& ul {
 			list-style: none;
 			margin-left: 25px;
 
-			& li {
-				line-height: 160%;
+			& li + li {
+				margin-top: 0;
 			}
 		}
 
@@ -1071,6 +1073,22 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 
 @media screen and (min-width: 992px) {
 	.contact-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8rem;
+		margin: auto;
+		line-height: 160%;
+
+		.contact-mail {
+			margin-left: 2rem;
+
+			& p {
+				padding-bottom: 0.5rem;
+				line-height: 160%;
+			}
+		}
+
 		& h2 {
 			margin-bottom: 90px;
 		}
@@ -1201,8 +1219,9 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 			}
 		}
 	}
-
-	@media (min-width: 992px) {
+}
+@media (min-width: 992px) {
+	.single-project {
 		margin-left: 8rem;
 		margin-bottom: 3rem;
 
@@ -1211,6 +1230,9 @@ nav .nav-container .menu-mobile.active .nav-language_container a span:hover {
 		}
 		& h2 {
 			font-size: 2rem;
+		}
+		& .content .main-content footer {
+			text-align: left;
 		}
 	}
 }

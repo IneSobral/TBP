@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,6 +11,8 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="/dist/glightbox.min.css" />
+
 		<title>X-Desgin</title>
 	</head>
 	<body id="content">
@@ -115,7 +117,7 @@
 						<a href="/en/plans.html">Plans</a>
 					</li>
 					<li class="heading-menu">
-						<a href="#">Contact Us</a>
+						<a href="/en/contact.html">Contact Us</a>
 					</li>
 					<li class="heading-menu">
 						<a href="/en/wp-performance.html">
@@ -127,7 +129,7 @@
 					<li class="nav-language">
 						<div class="nav-language_container">
 							<a href="#"><span>EN</span></a>
-							<a href="/pt/contact-pt.html"><span>PT</span></a>
+							<a href="/pt/wp-performance-pt.html"><span>PT</span></a>
 						</div>
 					</li>
 				</ul>
@@ -145,7 +147,7 @@
 					<li class="nav-language heading-menu">
 						<div class="nav-language_container">
 							<a href="#"><span>EN</span></a>
-							<a href="/pt/contact-pt.html"><span>PT</span></a>
+							<a href="/pt/wp-performance-pt.html"><span>PT</span></a>
 						</div>
 					</li>
 					<ul class="icons icons-mobile">
@@ -240,64 +242,10 @@
 			</div>
 		</nav>
 		<section>
-			<div class="main-container">
-				<div class="contact-info">
-					<div class="contact-info_container">
-						<h2 class="heading-2">Get in touch</h2>
-						<div class="location">
-							<div>
-								<svg
-									width="15"
-									height="23"
-									viewBox="0 0 15 23"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M0.640015 7.81996C0.640015 4.03876 3.71881 0.959961 7.50001 0.959961C11.2812 0.959961 14.36 4.03876 14.36 7.81996C14.36 10.8498 12.7435 14.3058 11.0333 17.0977C9.4237 19.7254 7.78147 21.6854 7.49973 22.0163C7.22432 21.6982 5.57881 19.7677 3.96605 17.1505C2.25747 14.3778 0.640015 10.9198 0.640015 7.81996ZM10.76 8.27996C10.76 6.48007 9.29991 5.01996 7.50001 5.01996C5.70012 5.01996 4.24001 6.48007 4.24001 8.27996C4.24001 10.0799 5.70012 11.54 7.50001 11.54C9.29991 11.54 10.76 10.0799 10.76 8.27996Z"
-										fill="white"
-										stroke="black"
-									></path>
-								</svg>
-							</div>
-							<ul class="heading-4">
-								<li>Second Home</li>
-								<li>Mercado da Ribeira</li>
-								<li>Avenida 24 de Julho</li>
-								<li>1200-479</li>
-								<li>Lisboa, Portugal</li>
-							</ul>
-						</div>
-						<div class="location">
-							<div>
-								<svg
-									width="15"
-									height="23"
-									viewBox="0 0 15 23"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M0.640015 7.81996C0.640015 4.03876 3.71881 0.959961 7.50001 0.959961C11.2812 0.959961 14.36 4.03876 14.36 7.81996C14.36 10.8498 12.7435 14.3058 11.0333 17.0977C9.4237 19.7254 7.78147 21.6854 7.49973 22.0163C7.22432 21.6982 5.57881 19.7677 3.96605 17.1505C2.25747 14.3778 0.640015 10.9198 0.640015 7.81996ZM10.76 8.27996C10.76 6.48007 9.29991 5.01996 7.50001 5.01996C5.70012 5.01996 4.24001 6.48007 4.24001 8.27996C4.24001 10.0799 5.70012 11.54 7.50001 11.54C9.29991 11.54 10.76 10.0799 10.76 8.27996Z"
-										fill="white"
-										stroke="black"
-									></path>
-								</svg>
-							</div>
-							<ul class="heading-4-light">
-								<li>Second Home</li>
-								<li>68 Hanbury Street</li>
-								<li>E1 5JL</li>
-								<li>London, UK</li>
-							</ul>
-						</div>
-					</div>
-					<div class="contact-mail">
-						<p>
-							Drop us a line about your project and we will contact you within a
-							business day.
-						</p>
-						<div class="btn-arrow">
+			<div class="main-container single-project">
+				<div class="content">
+					<header class="header-project">
+						<a href="/en/work.html">
 							<svg
 								width="40"
 								height="8"
@@ -306,20 +254,90 @@
 								xmlns="http://www.w3.org/2000/svg"
 							>
 								<path
-									d="M39.3536 4.35355C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464466C35.9763 0.269204 35.6597 0.269204 35.4645 0.464466C35.2692 0.659728 35.2692 0.976311 35.4645 1.17157L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53553C35.6597 7.7308 35.9763 7.7308 36.1716 7.53553L39.3536 4.35355ZM0 4.5H39V3.5H0V4.5Z"
+									d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5H40V3.5H1V4.5Z"
 									fill="#8764e6"
 								></path>
 							</svg>
+							<button class="btn-arrow" type="button">
+								Voltar a portfolio
+							</button>
+						</a>
+					</header>
+					<div class="info">
+						<div>Desenv. Web</div>
+						<h1 class="heading-1">Crypsbuy</h1>
+					</div>
+					<main class="main-content">
+						<div class="slider">
 							<p>
-								<a href="mailto:contact@xdesign.pt?subject=Contact"
-									>contact@xdesign.pt</a
-								>
+								Criptocurrency Webshop desenvolvida com PHP, vue.js, Javascript
+								e Blockchain
 							</p>
 						</div>
-					</div>
+						<h2 class="heading-2 text-center">Galeria</h2>
+						<div id="image-bg" class="gallery-single">
+							<div class="inner">
+								<a
+									href="/dist/assets/crypsbuy-page-bg.jpeg"
+									class="glightbox gridImages"
+								>
+									<img src="/dist/assets/crypsbuy-page.jpeg" />
+									Pagamentos
+								</a>
+							</div>
+							<div class="inner">
+								<a
+									href="/dist/assets/crypsbuy-devices-bg.jpeg"
+									class="glightbox gridImages"
+								>
+									<img src="/dist/assets/crypsbuy-devices.jpeg" />
+									Dispositivos móveis
+								</a>
+							</div>
+							<div class="inner">
+								<a
+									href="/dist/assets/crypsbuy-webshop-bg.jpeg"
+									class="glightbox gridImages"
+								>
+									<img src="/dist/assets/crypsbuy-webshop.jpeg" />
+									Comprar com Cripto
+								</a>
+							</div>
+							<div class="inner">
+								<a
+									href="/dist/assets/crypsbuy-homepage-bg.jpeg"
+									class="glightbox gridImages"
+								>
+									<img src="/dist/assets/crypsbuy-homepage.jpeg" />
+									Categorias
+								</a>
+							</div>
+							<div class="inner">
+								<a
+									href="/dist/assets/crypsbuy-login-bg.jpeg"
+									class="glightbox gridImages"
+								>
+									<img src="/dist/assets/crypsbuy-login.jpeg" />
+									Registo
+								</a>
+							</div>
+						</div>
+						<footer>
+							<span>Tags: blockchain , Javascript , PHP , rest API</span>
+						</footer>
+					</main>
 				</div>
 			</div>
 		</section>
+
 		<script src="/dist/script.js"></script>
+		<script src="/dist/glightbox.min.js"></script>
+
+		<script>
+			var lightbox = GLightbox();
+			lightbox.on('open', (target) => {
+				console.log('lightbox opened');
+			});
+		</script>
 	</body>
 </html>

@@ -1,191 +1,65 @@
-/*
+const browserLanguage = navigator.language.toLowerCase();
 
+const supportedLanguages = {
+	en: 'index.html',
+	pt: 'index-pt.html',
+};
 
+if (browserLanguage in supportedLanguages) {
+	const homepage = supportedLanguages[browserLanguage];
+	window.location.href = homepage;
+}
+
+// Set the language links' active state based on the current page
 document.addEventListener('DOMContentLoaded', function () {
-	const hamburgerMenu = document.querySelector('.hamburger-menu');
-	const mobileMenu = document.querySelector('.menu-mobile');
-	const navMenu = document.querySelector('.nav-left');
-
-	hamburgerMenu.addEventListener('click', function () {
-		this.classList.toggle('active');
-		mobileMenu.classList.toggle('active');
-		navMenu.classList.toggle('active');
-	});
-
-	const languageLinks = document.querySelectorAll('.nav-language a');
+	const languageLinks = document.querySelectorAll('.nav-language a span');
+	const languageLinksMobile = document.querySelectorAll(
+		'.menu-mobile .nav-language a span'
+	);
 	const enLink = languageLinks[0];
 	const ptLink = languageLinks[1];
+	const enLinkMobile = languageLinksMobile[0];
+	const ptLinkMobile = languageLinksMobile[1];
 
-	// Set initial state
-	enLink.classList.add('selected');
+	const currentPath = window.location.pathname;
+	const isPT =
+		currentPath.includes('/pt/') || currentPath.includes('index-pt.html');
 
-	languageLinks.forEach(function (link) {
-		link.addEventListener('click', function (event) {
-			event.preventDefault();
-
-			const targetLanguage = link.innerText.trim();
-
-			let targetPage = '';
-			if (targetLanguage === 'EN') {
-				targetPage = 'index.html';
-			} else {
-				targetPage = 'index-' + targetLanguage.toLowerCase() + '.html';
-			}
-
-			document.getElementById('content').innerHTML = '';
-			fetch(targetPage)
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById('content').innerHTML = data;
-
-					const hamburgerMenu = document.querySelector('.hamburger-menu');
-					const mobileMenu = document.querySelector('.menu-mobile');
-					const navMenu = document.querySelector('.nav-left');
-
-					hamburgerMenu.addEventListener('click', function () {
-						this.classList.toggle('active');
-						mobileMenu.classList.toggle('active');
-						navMenu.classList.toggle('active');
-					});
-
-					const languageSpans = document.querySelectorAll('.nav-language span');
-
-					languageLinks.forEach(function (link) {
-						link.addEventListener('click', function () {
-							languageLinks.forEach(function (l) {
-								l.classList.remove('active');
-							});
-							link.classList.add('active');
-						});
-					});
-
-					// Set initial state of language links and spans
-					if (targetLanguage === 'PT') {
-						languageLinks.forEach(function (l) {
-							l.classList.remove('active');
-						});
-						ptLink.classList.add('selected');
-						languageSpans.forEach(function (span) {
-							span.style.color =
-								span.innerText.trim() === 'PT'
-									? 'var(--purple)'
-									: 'var(--white)';
-						});
-					}
-				})
-				.catch((error) => {
-					console.log('Error:', error);
-				});
-		});
-	});
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-	const hamburgerMenu = document.querySelector('.hamburger-menu');
-	const mobileMenu = document.querySelector('.menu-mobile');
-	const navMenu = document.querySelector('.nav-left');
-
-	hamburgerMenu.addEventListener('click', function () {
-		this.classList.toggle('active');
-		mobileMenu.classList.toggle('active');
-		navMenu.classList.toggle('active');
-	});
-
-	const languageLinks = document.querySelectorAll('.nav-language a');
-	const enLink = languageLinks[0];
-	const ptLink = languageLinks[1];
-
-	// Set initial state
-	enLink.classList.add('selected');
-
-	languageLinks.forEach(function (link) {
-		link.addEventListener('click', function (event) {
-			event.preventDefault();
-
-			const targetLanguage = link.innerText.trim();
-
-			let targetPage = '';
-
-			if (targetLanguage === 'EN') {
-				if (window.location.pathname.includes('stack')) {
-					targetPage = '/en/stack.html';
-				} else if (window.location.pathname.includes('work')) {
-					targetPage = '/en/work.html';
-				} else if (window.location.pathname.includes('plans')) {
-					targetPage = '/en/plans.html';
-				} else if (window.location.pathname.includes('contact')) {
-					targetPage = '/en/contact.html';
-				} else if (window.location.pathname.includes('wp')) {
-					targetPage = '/en/wp-performance.html';
-				} else {
-					targetPage = 'index.html';
-				}
-			} else {
-				if (window.location.pathname.includes('stack')) {
-					targetPage = '/pt/stack-pt.html';
-				} else if (window.location.pathname.includes('work')) {
-					targetPage = '/pt/work-pt.html';
-				} else if (window.location.pathname.includes('plans')) {
-					targetPage = '/pt/plans-pt.html';
-				} else if (window.location.pathname.includes('contact')) {
-					targetPage = '/pt/contact-pt.html';
-				} else if (window.location.pathname.includes('wp')) {
-					targetPage = '/pt/wp-performance-pt.html';
-				} else {
-					targetPage = 'index-' + targetLanguage.toLowerCase() + '.html';
-				}
-			}
-
-			document.getElementById('content').innerHTML = '';
-			fetch(targetPage)
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById('content').innerHTML = data;
-					initializePage();
-				})
-				.catch((error) => {
-					console.log('Error:', error);
-				});
-		});
-	});
-
-	// Function to initialize the page after content is loaded
-	function initializePage() {
-		hamburgerMenu.addEventListener('click', function () {
-			this.classList.toggle('active');
-			mobileMenu.classList.toggle('active');
-			navMenu.classList.toggle('active');
-		});
-
-		const languageSpans = document.querySelectorAll('.nav-language span');
-
-		languageLinks.forEach(function (link) {
-			link.addEventListener('click', function () {
-				languageLinks.forEach(function (l) {
-					l.classList.remove('active');
-				});
-				link.classList.add('active');
-			});
-		});
-
-		// Set initial state of language links and spans
-		const targetLanguage = languageLinks[1].innerText.trim();
-		if (targetLanguage === 'PT') {
-			languageLinks.forEach(function (l) {
-				l.classList.remove('active');
-			});
-			ptLink.classList.add('selected');
-			languageSpans.forEach(function (span) {
-				span.style.color =
-					span.innerText.trim() === 'PT' ? 'var(--purple)' : 'var(--white)';
-			});
-		}
+	if (isPT) {
+		ptLink.classList.add('selected');
+		ptLinkMobile.classList.add('selected');
+	} else {
+		enLink.classList.add('selected');
+		enLinkMobile.classList.add('selected');
 	}
-});
-*/
 
-document.addEventListener('DOMContentLoaded', function () {
+	languageLinks.forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+
+			const targetLanguage = link.innerText.trim();
+			let targetPage = '';
+
+			if (targetLanguage === 'EN') {
+				if (isPT) {
+					targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
+				} else {
+					targetPage = currentPath.replace('/index-pt.html', '/index.html');
+				}
+			} else {
+				if (!isPT) {
+					targetPage = currentPath
+						.replace('/en/', '/pt/')
+						.replace('.html', '-pt.html');
+				} else {
+					targetPage = currentPath.replace('/index.html', '/index-pt.html');
+				}
+			}
+
+			window.location.href = targetPage;
+		});
+	});
+
 	const hamburgerMenu = document.querySelector('.hamburger-menu');
 	const mobileMenu = document.querySelector('.menu-mobile');
 	const navMenu = document.querySelector('.nav-left');
@@ -196,110 +70,26 @@ document.addEventListener('DOMContentLoaded', function () {
 		navMenu.classList.toggle('active');
 	});
 
-	const languageLinks = document.querySelectorAll('.nav-language a');
-	const enLink = languageLinks[0];
-	const ptLink = languageLinks[1];
-
-	// Set initial state
-	enLink.classList.add('selected');
-
-	languageLinks.forEach(function (link) {
-		link.addEventListener('click', function (event) {
-			event.preventDefault();
-
-			const targetLanguage = link.innerText.trim();
-
-			let targetPage = '';
-
-			if (targetLanguage === 'EN') {
-				if (window.location.pathname.includes('stack')) {
-					targetPage = '/en/stack.html';
-				} else if (window.location.pathname.includes('work')) {
-					targetPage = '/en/work.html';
-				} else if (window.location.pathname.includes('plans')) {
-					targetPage = '/en/plans.html';
-				} else if (window.location.pathname.includes('contact')) {
-					targetPage = '/en/contact.html';
-				} else if (window.location.pathname.includes('wp')) {
-					targetPage = '/en/wp-performance.html';
-				} else {
-					targetPage = 'index.html';
-				}
-			} else {
-				if (window.location.pathname.includes('stack')) {
-					targetPage = '/pt/stack-pt.html';
-				} else if (window.location.pathname.includes('work')) {
-					targetPage = '/pt/work-pt.html';
-				} else if (window.location.pathname.includes('plans')) {
-					targetPage = '/pt/plans-pt.html';
-				} else if (window.location.pathname.includes('contact')) {
-					targetPage = '/pt/contact-pt.html';
-				} else if (window.location.pathname.includes('wp')) {
-					targetPage = '/pt/wp-performance-pt.html';
-				} else {
-					targetPage = 'index-pt.html';
-				}
-			}
-
-			document.getElementById('content').innerHTML = '';
-			fetch(targetPage)
-				.then((response) => response.text())
-				.then((data) => {
-					document.getElementById('content').innerHTML = data;
-					initializePage();
-				})
-				.catch((error) => {
-					console.log('Error:', error);
-				});
-		});
-	});
-
-	// Function to initialize the page after content is loaded
-	function initializePage() {
-		hamburgerMenu.addEventListener('click', function () {
-			this.classList.toggle('active');
-			mobileMenu.classList.toggle('active');
-			navMenu.classList.toggle('active');
-		});
-
-		const languageSpans = document.querySelectorAll('.nav-language span');
-
-		languageLinks.forEach(function (link) {
-			link.addEventListener('click', function () {
-				languageLinks.forEach(function (l) {
-					l.classList.remove('active');
-				});
-				link.classList.add('active');
-			});
-		});
-
-		// Set initial state of language links and spans
-		const targetLanguage = languageLinks[1].innerText.trim();
-		if (targetLanguage === 'PT') {
-			languageLinks.forEach(function (l) {
-				l.classList.remove('active');
-			});
-			ptLink.classList.add('selected');
-			languageSpans.forEach(function (span) {
-				span.style.color =
-					span.innerText.trim() === 'PT' ? 'var(--purple)' : 'var(--white)';
-			});
+	let currentPage = window.location.href;
+	let navbarLinks = document.querySelectorAll('.heading-menu a');
+	navbarLinks.forEach(function (link) {
+		if (link.href === currentPage) {
+			link.classList.add('active');
+		} else {
+			link.classList.remove('active');
 		}
-	}
+	});
 });
 
 // Filter Single Projets
-
 (function () {
 	const filterButtons = document.querySelectorAll('.filter-portfolio .btn');
-	console.log(filterButtons);
 	const itemList = document.querySelector('.portfolio');
 
 	filterButtons.forEach((button) => {
 		button.addEventListener('click', filterItems);
 	});
 
-	// Function to filter items based on the selected filter
 	function filterItems() {
 		filterButtons.forEach((button) => {
 			button.classList.remove('active');
@@ -309,8 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		const selectedCategory = this.textContent.trim();
 
-		// Show all items if "All Projects" is selected
-		if (selectedCategory === 'All Projects') {
+		if (
+			selectedCategory === 'All Projects' ||
+			selectedCategory === 'Todos projetos'
+		) {
 			itemList.querySelectorAll('li').forEach((item) => {
 				item.style.display = 'block';
 			});
@@ -319,15 +111,21 @@ document.addEventListener('DOMContentLoaded', function () {
 				item.style.display = 'none';
 			});
 
-			const filteredItems = document.querySelectorAll('#filtered-item');
+			let filteredItems;
+			const resultado = selectedCategory.toLowerCase().replace(/\.\s/g, '-');
+			const resultadoen = selectedCategory.toLowerCase().replace(/\s/g, '-');
+			console.log(resultado);
+			if (selectedCategory === 'Web Development') {
+				filteredItems = document.querySelectorAll(
+					'.portfolio li.' + resultadoen
+				);
+				console.log(filteredItems);
+			} else {
+				filteredItems = document.querySelectorAll('.portfolio li.' + resultado);
+			}
+
 			filteredItems.forEach((item) => {
-				if (
-					item.classList.contains(
-						selectedCategory.toLowerCase().replace(/\s/g, '-')
-					)
-				) {
-					item.style.display = 'block';
-				}
+				item.style.display = 'block';
 			});
 		}
 	}
