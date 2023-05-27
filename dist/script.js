@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const currentPath = window.location.pathname;
 	const isPT =
 		currentPath.includes('/pt/') ||
-		currentPath.includes('index-pt.html') ||
+		currentPath.includes('/index-pt.html') ||
 		currentPath === '/';
 
 	if (isPT) {
