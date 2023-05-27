@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const currentPath = window.location.pathname;
 	const isPT =
-		currentPath.includes('/pt/') || currentPath.includes('index-pt.html');
+		currentPath.includes('/pt/') ||
+		currentPath.includes('index-pt.html') ||
+		currentPath === '/';
 
 	if (isPT) {
 		ptLink.classList.add('selected');
@@ -42,7 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (targetLanguage === 'EN') {
 				if (isPT) {
-					targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
+					if (currentPath === '/') {
+						targetPage = '/index.html';
+					} else {
+						targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
+					}
 				} else {
 					targetPage = currentPath.replace('/index-pt.html', '/index.html');
 				}
@@ -56,9 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 
-			const currentURL = new URL(window.location.href);
-			const newURL = new URL(targetPage, currentURL.origin);
-			window.location.href = newURL.href;
+			window.location.href = targetPage;
 		});
 	});
 
