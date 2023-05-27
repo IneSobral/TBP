@@ -56,7 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 
-			window.location.href = targetPage;
+			const currentURL = new URL(window.location.href);
+			const newURL = new URL(targetPage, currentURL.origin);
+			window.location.href = newURL.href;
 		});
 	});
 
