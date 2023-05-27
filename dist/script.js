@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const isPT =
 		currentPath.includes('/pt/') ||
 		currentPath.includes('/index-pt.html') ||
-		currentPath === '/';
+		currentPath === '//xdesign.';
 
 	if (isPT) {
 		ptLink.classList.add('selected');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (targetLanguage === 'EN') {
 				if (isPT) {
-					if (currentPath === '/') {
+					if (currentPath === '//xdesign.') {
 						targetPage = '/index.html';
 					} else {
 						targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
