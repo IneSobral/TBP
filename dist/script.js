@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const currentPath = window.location.pathname;
 	const isPT =
-		currentPath.includes('/pt/') ||
-		currentPath.includes('/index-pt.html') ||
-		currentPath === '//xdesign.';
+		currentPath.includes('/pt/') || currentPath.includes('index-pt.html');
 
 	if (isPT) {
 		ptLink.classList.add('selected');
@@ -44,11 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (targetLanguage === 'EN') {
 				if (isPT) {
-					if (currentPath === '//xdesign.') {
-						targetPage = '/index.html';
-					} else {
-						targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
-					}
+					targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
 				} else {
 					targetPage = currentPath.replace('/index-pt.html', '/index.html');
 				}
