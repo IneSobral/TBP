@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const ptLinkMobile = languageLinksMobile[1];
 
 	const currentPath = window.location.pathname;
+	console.log(currentPath);
 	const isPT =
 		currentPath.includes('/pt/') || currentPath.includes('index-pt.html');
 
