@@ -902,7 +902,8 @@ nav .nav-container {
 				border: 1px solid white;
 				text-align: center;
 				width: 100%;
-				padding: 10px 0
+				padding: 10px 0;
+				padding-top: 0
 			}
 
 .plans-section .plans-ul a .title span {
@@ -1124,7 +1125,7 @@ nav .nav-container {
 		grid-gap: 1rem;
 		gap: 1rem; /* Gap between columns */
 		line-height: 160%;
-		margin-left: 2.5rem;
+		margin-left: 2rem;
 	}
 
 		.contact-info .contact-mail {

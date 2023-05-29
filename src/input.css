@@ -879,6 +879,7 @@ nav {
 				text-align: center;
 				width: 100%;
 				padding: 10px 0;
+				padding-top: 0;
 
 				& span {
 					display: block;
@@ -1099,7 +1100,7 @@ nav {
 		grid-template-columns: 1fr 1fr; /* Two equal-width columns */
 		gap: 1rem; /* Gap between columns */
 		line-height: 160%;
-		margin-left: 2.5rem;
+		margin-left: 2rem;
 
 		.contact-mail {
 			margin-top: 8.35rem;
