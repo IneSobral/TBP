@@ -1081,7 +1081,7 @@ nav {
 			line-height: 160%;
 		}
 	}
-	& .contact-mail p {
+	& .contact-mail p:not(:last-child) {
 		padding-bottom: 1rem;
 	}
 
@@ -1095,15 +1095,14 @@ nav {
 
 @media screen and (min-width: 992px) {
 	.contact-info {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		gap: 8rem;
-		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+		gap: 1rem; /* Gap between columns */
 		line-height: 160%;
+		margin-left: 2.5rem;
 
 		.contact-mail {
-			margin-top: -6.5rem;
+			margin-top: 8.35rem;
 
 			& p {
 				padding-bottom: 0.5rem;
@@ -1118,7 +1117,6 @@ nav {
 		& .location {
 			display: flex;
 			align-items: start;
-
 			margin-bottom: 70px;
 
 			& ul {
