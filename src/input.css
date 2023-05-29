@@ -1383,8 +1383,8 @@ nav {
 				& button {
 					width: 150px;
 					height: 50px;
-					border: 2px solid #00a0ff;
-					color: #00a0ff;
+					border: 2px solid var(--purple);
+					color: var(--purple);
 					border-radius: 100px;
 					background: transparent;
 					margin-top: 20px;
@@ -1431,6 +1431,8 @@ nav {
 
 @media (min-width: 992px) {
 	.scan-section {
+		margin-left: auto;
+		margin-right: auto;
 		& .search {
 			display: flex;
 			flex-direction: column;
@@ -1488,8 +1490,8 @@ nav {
 					& button {
 						width: 150px;
 						height: 50px;
-						border: 2px solid #00a0ff;
-						color: #00a0ff;
+						border: 2px solid var(--purple);
+						color: var(--purple);
 						border-radius: 100px;
 						background: transparent;
 						margin-left: 0.3rem;

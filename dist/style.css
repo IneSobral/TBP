@@ -1433,8 +1433,10 @@ nav .nav-container {
 .scan-section .search form .search-div button {
 					width: 150px;
 					height: 50px;
-					border: 2px solid #00a0ff;
-					color: #00a0ff;
+					border: 2px solid #8764e6;
+					border: 2px solid var(--purple);
+					color: #8764e6;
+					color: var(--purple);
 					border-radius: 100px;
 					background: transparent;
 					margin-top: 20px;
@@ -1477,6 +1479,10 @@ nav .nav-container {
 					}
 
 @media (min-width: 992px) {
+	.scan-section {
+		margin-left: auto;
+		margin-right: auto
+	}
 		.scan-section .search {
 			display: flex;
 			flex-direction: column;
@@ -1537,8 +1543,10 @@ nav .nav-container {
 					.scan-section .search form .search-div button {
 						width: 150px;
 						height: 50px;
-						border: 2px solid #00a0ff;
-						color: #00a0ff;
+						border: 2px solid #8764e6;
+						border: 2px solid var(--purple);
+						color: #8764e6;
+						color: var(--purple);
 						border-radius: 100px;
 						background: transparent;
 						margin-left: 0.3rem;
