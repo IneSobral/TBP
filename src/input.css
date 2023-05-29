@@ -976,7 +976,7 @@ nav {
 	& iframe {
 		width: 350px;
 		padding-left: 0;
-		margin-left: -1rem;
+		margin-left: -2rem;
 	}
 
 	& .btn-wide {
