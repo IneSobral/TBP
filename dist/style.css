@@ -986,7 +986,7 @@ nav .nav-container {
 		list-style: disc;
 		padding-left: 1rem;
 		margin: 1rem 0;
-		width: 100%
+		width: 95%
 	}
 
 .wp-performance_section .wp-ul li {
@@ -999,9 +999,16 @@ nav .nav-container {
 			word-break: break-word;
 		}
 
+.wp-performance_section iframe {
+		width: 350px;
+		padding-left: 0;
+		margin-left: -1rem;
+	}
+
 .wp-performance_section .btn-wide {
 		margin-top: 2.5rem;
-		width: 100%;
+		width: 90%;
+
 		display: flex;
 		justify-content: space-evenly
 	}
@@ -1029,9 +1036,15 @@ nav .nav-container {
 					border-color: var(--purple);
 				}
 /* WP PERFORMANCE SECTION MEDIA QUERY */
+
 @media (min-width: 992px) and (max-width: 1500px) {
 		.wp-performance_section iframe {
 			width: 420px;
+		}
+}
+@media screen and (min-width: 1501px) {
+		.wp-performance_section iframe {
+			width: 580px;
 		}
 }
 
@@ -1089,7 +1102,12 @@ nav .nav-container {
 
 .contact-info .location div {
 			margin-top: 5px;
+			line-height: 160%;
 		}
+
+.contact-info .contact-mail p {
+		padding-bottom: 1rem;
+	}
 
 .contact-info .btn-arrow a {
 		text-decoration: none;
@@ -1102,7 +1120,7 @@ nav .nav-container {
 @media screen and (min-width: 992px) {
 	.contact-info {
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		grid-gap: 8rem;
 		gap: 8rem;
@@ -1111,7 +1129,7 @@ nav .nav-container {
 	}
 
 		.contact-info .contact-mail {
-			margin-left: 2rem
+			margin-top: -6.5rem
 		}
 
 			.contact-info .contact-mail p {
@@ -1284,7 +1302,7 @@ nav .nav-container {
 }
 /* --------------------------- WP PLANS - Refactor + Store-refactor SECTION ---------------------------- */
 .main-container {
-	margin-left: 1.5rem;
+	margin-left: 1.8rem;
 	margin-right: 1rem
 }
 @media (min-width: 992px) {
@@ -1312,6 +1330,10 @@ nav .nav-container {
 			color: #fff;
 			color: var(--white);
 		}
+.refactor-content {
+	padding-left: 2rem;
+	padding-right: 0.5rem
+}
 .refactor-content h1 {
 		font-size: 30px;
 	}
