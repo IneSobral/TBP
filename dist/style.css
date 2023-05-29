@@ -1470,8 +1470,12 @@ nav .nav-container {
 						-webkit-appearance: none;
 						outline: none;
 						cursor: pointer;
-						margin-bottom: 2.5px;
+						margin-bottom: 2.5px
 					}
+
+.scan-section .search form .terms p .checkbox-round:checked {
+							background-color: white;
+						}
 
 .scan-section .search form .terms p a {
 						color: #fff;
@@ -1587,3 +1591,54 @@ nav .nav-container {
 							text-decoration: underline;
 						}
 }
+
+/* --------------------------- TERMS & CONDITIONS SECTION ----------------------------- */
+
+.terms-container {
+	width: 100%;
+	height: 90%;
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	overflow-y: scroll;
+	max-height: 900px;
+	position: relative;
+}
+
+.terms-container .terms-div .close {
+			position: absolute;
+			right: 2rem;
+			width: 30px;
+			height: 20px;
+			margin-top: 10px;
+		}
+
+.terms-container .terms-div div {
+			width: 90%;
+		}
+
+.terms-container .terms-div .terms-title {
+			margin-top: 20px;
+		}
+
+.terms-container .terms-div h1,
+		.terms-container .terms-div h2 {
+			margin: 0.5rem auto;
+		}
+
+.terms-container .terms-div .terms-faded {
+			opacity: 60%;
+			margin-bottom: 0.5rem;
+		}
+
+.terms-container .terms-div p {
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+			margin-bottom: 0.5rem;
+			letter-spacing: 1.5px;
+			line-height: 160%;
+		}
