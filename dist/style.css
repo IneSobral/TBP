@@ -804,6 +804,8 @@ nav .nav-container {
 		color: var(--purple);
 	}
 
+/* --------------------------- KEYFRAMES SECTION ----------------------------- */
+
 @keyframes portfolio {
 	0% {
 		transform: translateX(0);
@@ -966,7 +968,8 @@ nav .nav-container {
 	justify-content: space-between;
 	width: 100%;
 	grid-gap: 3rem;
-	gap: 3rem
+	gap: 3rem;
+	margin-left: 0.5rem
 }
 
 .wp-performance_section h2 {
@@ -981,7 +984,7 @@ nav .nav-container {
 
 .wp-performance_section .wp-ul {
 		list-style: disc;
-		padding-left: 3rem;
+		padding-left: 1rem;
 		margin: 1rem 0;
 		width: 100%
 	}
@@ -1281,7 +1284,7 @@ nav .nav-container {
 }
 /* --------------------------- WP PLANS - Refactor + Store-refactor SECTION ---------------------------- */
 .main-container {
-	margin-left: 2rem;
+	margin-left: 1.5rem;
 	margin-right: 1rem
 }
 @media (min-width: 992px) {
@@ -1351,3 +1354,228 @@ nav .nav-container {
 			color: #fff;
 			color: var(--white);
 		}
+
+/* --------------------------- SCAN SECTION ----------------------------- */
+
+.scan-section {
+	margin: 120px 0;
+	height: 85%;
+	position: relative;
+	padding: auto 0
+}
+
+.scan-section .search {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		line-height: 160%;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: 0.5px
+	}
+
+.scan-section .search div .title {
+			font-size: 16px;
+			font-weight: 300;
+			text-align: center;
+			color: #fff;
+			margin-top: 60px;
+			width: 100%
+		}
+
+.scan-section .search div .title b {
+				font-weight: bold;
+			}
+
+.scan-section .search div .title .free {
+				color: #ed860d;
+				border-radius: 100px;
+				border: 2px solid #ed860d;
+				font: montserrat;
+				font-weight: 600;
+				padding: 2px 10px 3px 10px;
+			}
+
+.scan-section .search form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column
+		}
+
+.scan-section .search form .search-div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column
+			}
+
+.scan-section .search form .search-div input[type='url'] {
+					color: #fff;
+					background-color: transparent;
+					margin-top: 15px;
+					height: 50px;
+					width: 290px;
+					border: 1px solid #fff;
+					border-radius: 10px;
+					padding-left: 20px;
+				}
+
+.scan-section .search form .search-div button[type='reset'] {
+					display: none;
+				}
+
+.scan-section .search form .search-div button:not(:disabled) {
+					cursor: pointer;
+				}
+
+.scan-section .search form .search-div button {
+					width: 150px;
+					height: 50px;
+					border: 2px solid #00a0ff;
+					color: #00a0ff;
+					border-radius: 100px;
+					background: transparent;
+					margin-top: 20px;
+				}
+
+.scan-section .search form .terms {
+				color: #fff;
+				font-weight: 300;
+				margin-top: 20px;
+				font-size: 12px;
+				margin-left: 20px;
+				margin-right: 20px
+			}
+
+.scan-section .search form .terms p {
+					color: #fff;
+					font-weight: 300;
+					font-size: 14px;
+					text-align: center
+				}
+
+.scan-section .search form .terms p .checkbox-round {
+						width: 15px;
+						height: 15px;
+						background-color: transparent;
+						border-radius: 50%;
+						vertical-align: middle;
+						border: 1px solid #ddd;
+						-moz-appearance: none;
+						     appearance: none;
+						-webkit-appearance: none;
+						outline: none;
+						cursor: pointer;
+						margin-bottom: 2.5px;
+					}
+
+.scan-section .search form .terms p a {
+						color: #fff;
+						text-decoration: underline;
+					}
+
+@media (min-width: 992px) {
+		.scan-section .search {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%
+		}
+
+			.scan-section .search div .title {
+				font-size: 16px;
+				font-weight: 300;
+				text-align: center;
+				color: #fff;
+				margin-top: 60px
+			}
+
+				.scan-section .search div .title b {
+					font-weight: bold;
+				}
+
+				.scan-section .search div .title .free {
+					color: #ed860d;
+					border-radius: 100px;
+					border: 2px solid #ed860d;
+					font: montserrat;
+					font-weight: 600;
+					padding: 2px 10px 3px 10px;
+				}
+
+			.scan-section .search form {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column
+			}
+
+				.scan-section .search form .search-div {
+					display: flex;
+					flex-direction: row
+				}
+
+					.scan-section .search form .search-div input[type='url'] {
+						color: #fff;
+						background-color: transparent;
+						margin-top: 15px;
+						height: 50px;
+						width: 460px;
+						border: 1px solid #fff;
+						border-radius: 10px;
+						padding-left: 20px;
+					}
+					.scan-section .search form .search-div button[type='reset'] {
+						display: none;
+					}
+					.scan-section .search form .search-div button:not(:disabled) {
+						cursor: pointer;
+					}
+					.scan-section .search form .search-div button {
+						width: 150px;
+						height: 50px;
+						border: 2px solid #00a0ff;
+						color: #00a0ff;
+						border-radius: 100px;
+						background: transparent;
+						margin-left: 0.3rem;
+					}
+
+				.scan-section .search form .terms {
+					color: #fff;
+					font-weight: 300;
+					margin-top: 20px;
+					font-size: 12px;
+					margin-left: 20px;
+					margin-right: 20px
+				}
+
+					.scan-section .search form .terms p {
+						color: #fff;
+						font-weight: 300;
+						font-size: 14px
+					}
+
+						.scan-section .search form .terms p .checkbox-round {
+							width: 15px;
+							height: 15px;
+							background-color: transparent;
+							border-radius: 50%;
+							vertical-align: middle;
+							border: 1px solid #ddd;
+							-moz-appearance: none;
+							     appearance: none;
+							-webkit-appearance: none;
+							outline: none;
+							cursor: pointer;
+							margin-bottom: 2.5px;
+						}
+
+						.scan-section .search form .terms p a {
+							color: #fff;
+							text-decoration: underline;
+						}
+}
