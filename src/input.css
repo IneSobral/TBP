@@ -14,10 +14,10 @@
 }
 
 :root {
-	--dark-blue: #221e27;
-	--purple: #8764e6;
-	--white: #fff;
-	--orange: #ed860d;
+	--dark-blue: #ece1dc;
+	--purple: #c25555;
+	--white: #0b0a0a;
+	--orange: #850707;
 }
 
 *,
@@ -178,9 +178,12 @@ nav {
 
 		& .nav-logo {
 			padding-right: 1rem;
-			& img {
-				width: auto;
-				height: 24px;
+
+			span {
+				font-weight: bold;
+				font-family: 'Courier New', Courier, monospace;
+				font-size: 1.8rem;
+				color: var(--white);
 			}
 		}
 
@@ -239,12 +242,12 @@ nav {
 			z-index: 5;
 
 			& .nav-drop-item {
-				background-color: #221e27;
+				background-color: var(--dark-blue);
 			}
 
 			& .nav-drop-item a {
 				text-decoration: none;
-				color: var(--white);
+				color: var(--orange);
 				font-size: 16px;
 			}
 			& .nav-drop-item a:hover {
@@ -437,11 +440,6 @@ nav {
 		width: 100%;
 		height: calc(100vh - 8.75rem);
 		position: relative;
-
-		& img {
-			max-width: 100%;
-			height: auto;
-		}
 
 		& .home-container_info {
 			position: absolute;
