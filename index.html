@@ -11,14 +11,47 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
 			rel="stylesheet"
 		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Link Swiper's CSS -->
 		<link
 			rel="stylesheet"
-			href="node_modules/glightbox/dist/css/glightbox.min.css"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 		/>
-		<script src="node_modules/glightbox/dist/js/glightbox.min.js"></script>
-		<title>X-Desgin</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.css"
+			integrity="sha512-Chxzu1hIgdTWzvBYD6rifXuhsG91mXCtYP/hKHSHPRyYUluMJt3PVEE6k4ThFrE4l0NVnq9dfYSj7mEubGCTvw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<title>The breakfast Power</title>
 	</head>
 	<body>
+		<div id="cookiepolicy" class="cookiepolicy">
+			<div class="container">
+				<div class="row">
+					<div class="row-center">
+						<p class="small">
+							Like most websites Furness Building Society use cookies, and in
+							order to continually improve our website, we collect non-personal
+							data through cookies. By continuing to use the website you are
+							accepting the use of these cookies. To find out more read our
+							<a href="/">Cookie Policy.</a>
+						</p>
+					</div>
+					<div class="cookie-btn">
+						<a class="btn-accept" id="cookieconfirm">Accept</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<nav class="nav">
 			<div class="nav-container">
 				<div class="nav-left">
@@ -111,7 +144,7 @@
 				<!-- Desktop Menu -->
 				<ul class="menu-desktop">
 					<li class="heading-menu">
-						<a href="/en/restaurante.html">Restaurante</a>
+						<a href="/en/restaurante.html">Restaurantes</a>
 					</li>
 					<li class="heading-menu">
 						<a href="/en/especialidades.html">Espacialidades</a>
@@ -246,16 +279,302 @@
 				</div>
 			</div>
 		</nav>
-		<section class="home">
-			<div class="home-container">
-				<img src="" alt="" />
-				<div class="home-container_info">
-					<h1>The Breakfast Power</h1>
-					<h3>Like having breakfast at home</h3>
+		<main id="website-content">
+			<!-- HOME SECTION -->
+			<section class="home">
+				<div class="home-container">
+					<span class="home-container_img">
+						<img
+							src="/dist/assets/Modern Monogram Wedding Badge Logo (2).png"
+							alt="logo"
+					/></span>
+					<div class="home-container_info">
+						<h1>The Breakfast Power</h1>
+						<h3>Like having breakfast at home</h3>
+					</div>
+				</div>
+			</section>
+			<!-- ABOUT SECTION -->
+			<section class="about">
+				<div class="about-heading">
+					<h1 class="heading-1">JOIN THE POWER</h1>
+					<img src="/dist/assets/arrow-down.png" alt="arrow" />
+				</div>
+				<div class="about-main">
+					<div class="about-main_left">
+						<h3 class="heading-2">About us ...</h3>
+						<p>
+							The Breakfast Power is a restaurant with three locations in
+							Lisbon, all specialized in offering the best brunch in the city.
+							With a cozy atmosphere and a creative menu, it provides a wide
+							selection of dishes, including vegetarian and vegan options. The
+							friendly and relaxed service is the brand's trademark, making each
+							visit a memorable experience. Each location has its own
+							personality, but they all share the same inviting and high-quality
+							spirit.
+						</p>
+						<a href="#" class="btn about-btn">Menu</a>
+					</div>
+					<div class="about-main_right">
+						<img src="/dist/assets/about-main-img.png" alt="about" />
+					</div>
+				</div>
+				<footer></footer>
+			</section>
+			<!-- BRUNCH SECTION -->
+			<section class="brunch-section">
+				<div class="brunch-container">
+					<div class="shape">
+						<h3>
+							<span>Brunch</span> is a meal that combines elements of breakfast
+							and lunch, offering a variety of sweet and savory dishes,
+							beverages, and a relaxed atmosphere, ideal for those seeking a
+							complete and relaxing gastronomic experience.
+						</h3>
+					</div>
+				</div>
+			</section>
+			<!-- LOCATION SECTION -->
+			<section class="location-section">
+				<div class="location-container">
+					<div class="location-heading">
+						<h2 class="heading-1">Locations</h2>
+					</div>
+					<div class="location-box">
+						<div class="box">
+							<img src="/dist/assets/cascais-interior.jpg" alt="cascais" />
+							<h2>Cascais</h2>
+							<a href="#" class="btn about-btn">Explore</a>
+						</div>
+						<div class="box">
+							<img
+								src="/dist/assets/Saldanha-interior-table.jpg"
+								alt="saldanha"
+							/>
+							<h2>Saldanha</h2>
+							<a href="#" class="btn about-btn">Explore</a>
+						</div>
+						<div class="box">
+							<img src="/dist/assets/monsanto-interior.jpg" alt="monsanto" />
+							<h2>Monsanto</h2>
+							<a href="#" class="btn about-btn">Explore</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Testimonioal SECTION -->
+			<section class="testimonials-section">
+				<div class="testimonials-section_container">
+					<h2 class="heading-1">What people say about us</h2>
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="card-left">
+									<img src="/dist/assets/people1.jpg" alt="" />
+									<h3>Jane Doe</h3>
+								</div>
+								<div class="card-right">
+									<p>
+										Lorem ipsum dolorisicing elit. Officia voluptate ratione
+										voluptates natus excepturi? Adipisci!
+									</p>
+									<div class="card-icons">
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star-empty.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card-left">
+									<img src="/dist/assets/people2.jpg" alt="" />
+									<h3>John Doe</h3>
+								</div>
+								<div class="card-right">
+									<p>
+										Lorem ipsum dolor elit. Officia voluptate ratione voluptates
+										natus excepturi? Adipisci!
+									</p>
+									<div class="card-icons">
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card-left">
+									<img src="/dist/assets/people3.jpg" alt="" />
+									<h3>Jane Doe</h3>
+								</div>
+								<div class="card-right">
+									<p>
+										Lorem ipsum adipisicing elit. Officia voluptate ratione
+										voluptates natus excepturi? Adipisci!
+									</p>
+									<div class="card-icons">
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star-empty.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card-left">
+									<img src="/dist/assets/people1.jpg" alt="" />
+									<h3>Jane Doe</h3>
+								</div>
+								<div class="card-right">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Officia voluptate Adipisci!
+									</p>
+									<div class="card-icons">
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star-empty.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card-left">
+									<img src="/dist/assets/people1.jpg" alt="" />
+									<h3>Jane Doe</h3>
+								</div>
+								<div class="card-right">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Officia voluptate ratione voluptates natus excepturi?
+										Adipisci!
+									</p>
+									<div class="card-icons">
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star.png" alt="" />
+										<img src="/dist/assets/star-empty.png" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact-section">
+				<div class="contact-container">
+					<h2 class="heading-1">Get in touch!</h2>
+					<div>
+						<form
+							class="contact-box"
+							action="mailto:TheBreakfastPower@gamil.com"
+							method="POST"
+							enctype="text/plain"
+						>
+							<div class="left"></div>
+							<div class="right">
+								<h2>Contact Us</h2>
+								<input
+									type="text"
+									class="field"
+									placeholder="Your Name"
+									required
+								/>
+								<input
+									type="text"
+									class="field"
+									placeholder="Your Email"
+									required
+								/>
+								<input type="text" class="field" placeholder="Phone" />
+								<textarea
+									placeholder="Message"
+									class="field"
+									required
+								></textarea>
+								<button type="submit" class="btn">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="footer-top">
+				<div class="footer-top_left">
+					<h2>The Breakfast Power</h2>
+					<a>+351 210 000 000</a>
+					<a>TheBreakfastPower@gmail.com</a>
+					<div class="footer-icons">
+						<a href="#"><img src="/asests/insta-white.svg" alt="" /></a>
+						<a href="#"><img src="/asests/facebook-white.svg" alt="" /></a>
+						<a href="#"><img src="/asests/instagram-white.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="footer-top_rigth">
+					<h2>MAPA DO SITE</h2>
+					<div class="footer-links">
+						<div class="footer-links_column1">
+							<a href="">Restaurantes</a>
+							<a href="">Especialidadesa</a>
+							<a href="">Menu</a>
+							<a href="">Grupos</a>
+						</div>
+						<div class="footer-links_column2">
+							<a href="">Reservas</a>
+							<a href="">Contatos</a>
+							<a href="">Localizacao</a>
+						</div>
+						<div class="footer-links_column3">
+							<a href="">Política de privacidade</a>
+							<a href="">Cookies</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		</section>
-
+			<hr />
+			<div class="footer-bottom">
+				<p>
+					Copyright © 2023 The Breakfast Power - Todos os direitos reservados
+				</p>
+			</div>
+		</footer>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.js"
+			integrity="sha512-0N/5ZOjfsh3niel+5dRD40HQkFOWaxoVzqMVAHnmAO2DC3nY/TFB7OYTaPRAFJ571IRS/XRsXGb2XyiFLFeu1g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="/dist/script.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.mySwiper', {
+				cssMode: true,
+				slidesPerView: 3,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				mousewheel: true,
+				keyboard: true,
+			});
+		</script>
 	</body>
 </html>

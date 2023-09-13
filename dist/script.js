@@ -85,57 +85,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-// Filter Single Projets
-(function () {
-	const filterButtons = document.querySelectorAll('.filter-portfolio .btn');
-	const itemList = document.querySelector('.portfolio');
+//Cookie policy
+function hideCookiePolicy() {
+	var cookiePolicy = document.getElementById('cookiepolicy');
+	cookiePolicy.style.display = 'none';
 
-	filterButtons.forEach((button) => {
-		button.addEventListener('click', filterItems);
-	});
+	// Make the website content fully visible
+	var websiteContent = document.getElementById('website-content');
+	websiteContent.style.opacity = '1';
+	websiteContent.style.filter = 'none';
+}
 
-	function filterItems() {
-		filterButtons.forEach((button) => {
-			button.classList.remove('active');
-		});
+// Function to show the cookie policy on page load
+function showCookiePolicy() {
+	var cookiePolicy = document.getElementById('cookiepolicy');
+	cookiePolicy.style.display = 'block';
+}
 
-		this.classList.add('active');
+// Attach a click event handler to the "Accept" button
+var acceptButton = document.getElementById('cookieconfirm');
+acceptButton.addEventListener('click', hideCookiePolicy);
 
-		const selectedCategory = this.textContent.trim();
-
-		if (
-			selectedCategory === 'All Projects' ||
-			selectedCategory === 'Todos projetos'
-		) {
-			itemList.querySelectorAll('li').forEach((item) => {
-				item.style.display = 'block';
-			});
-		} else {
-			itemList.querySelectorAll('li').forEach((item) => {
-				item.style.display = 'none';
-			});
-
-			let filteredItems;
-			const resultado = selectedCategory.toLowerCase().replace(/\.\s/g, '-');
-			const resultadoen = selectedCategory.toLowerCase().replace(/\s/g, '-');
-			console.log(resultado);
-			if (selectedCategory === 'Web Development') {
-				filteredItems = document.querySelectorAll(
-					'.portfolio li.' + resultadoen
-				);
-				console.log(filteredItems);
-			} else {
-				filteredItems = document.querySelectorAll('.portfolio li.' + resultado);
-			}
-
-			filteredItems.forEach((item) => {
-				item.style.display = 'block';
-			});
-		}
-	}
-
-	itemList.querySelectorAll('li').forEach((item) => {
-		item.style.display = 'block';
-	});
-	filterButtons[0].classList.add('active');
-})();
+// Show the cookie policy when the page loads
+window.addEventListener('load', showCookiePolicy);

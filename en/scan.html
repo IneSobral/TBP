@@ -11,6 +11,10 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<script type="module" src="./index.js"></script>
 		<title>X-Desgin</title>
 	</head>
 	<body id="content">
@@ -239,6 +243,10 @@
 				</div>
 			</div>
 		</nav>
+		<section class="map-section">
+			<div id="map"></div>
+		</section>
+
 		<section class="main-container scan-section">
 			<div class="search" id="page-content">
 				<div style="margin: 20px 20px 0 20px">
@@ -286,5 +294,9 @@
 		</section>
 
 		<script src="/dist/script.js"></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPa3kGgiSb48D8ZxD9I9qHL93h2g5qzqw&callback=initMap"
+			defer
+		></script>
 	</body>
 </html>
