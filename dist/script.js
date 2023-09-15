@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const enLinkMobile = languageLinksMobile[0];
 	const ptLinkMobile = languageLinksMobile[1];
 
-	const currentPath = window.location.pathname;
+	let currentPath = window.location.pathname;
 	if (currentPath === '/' || currentPath === 'https://tbpower.netlify.app/') {
 		return (currentPath = '/index.html');
 	}
