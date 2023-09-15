@@ -123,6 +123,8 @@ p {
 @media (max-width: 768px) {
 	.main-container {
 		padding: 0 20px;
+		margin-left: 0.8rem;
+		margin-right: 0.8rem;
 	}
 }
 
@@ -133,12 +135,12 @@ p {
 }
 @media (max-width: 1024px) {
 	.heading-1 {
-		font-size: 40px;
+		font-size: 36px;
 	}
 }
 @media (max-width: 768px) {
 	.heading-1 {
-		font-size: 36px;
+		font-size: 30px;
 	}
 }
 
@@ -948,6 +950,84 @@ nav .nav-container {
 	opacity: 1; /* Customize the active bullet opacity */
 }
 
+@media screen and (max-width: 880px) {
+	.testimonials-section {
+		background-color: #850707;
+	}
+
+		.testimonials-section .testimonials-section_container {
+			max-width: 95%;
+			height: 40rem;
+			margin: auto;
+			padding-top: 2rem;
+			margin-top: 8rem;
+		}
+
+		.testimonials-section h2 {
+			margin-bottom: 0rem;
+			text-align: center;
+			font-size: 1.6rem;
+			text-shadow: 2px 2px 3px rgb(107, 62, 69);
+		}
+
+		.testimonials-section .swiper {
+			width: 100%;
+			height: 25rem;
+			padding: 3rem;
+		}
+
+			.testimonials-section .swiper .swiper-slide {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				text-align: center;
+				font-size: 16px;
+				border-radius: 15px;
+				background-color: rgb(253, 250, 250);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+				.testimonials-section .swiper .swiper-slide .card-left {
+					flex: 1;
+					color: #333333;
+				}
+
+					.testimonials-section .swiper .swiper-slide .card-left h3 {
+						font-size: 0.9em;
+					}
+
+					.testimonials-section .swiper .swiper-slide .card-left img {
+						width: 6rem;
+						height: 6rem;
+						border-radius: 50%;
+					}
+
+				.testimonials-section .swiper .swiper-slide .card-right {
+					flex: 1;
+					padding-top: 1rem;
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
+					.testimonials-section .swiper .swiper-slide .card-right p {
+						width: 100%;
+						color: #333333;
+						margin: auto;
+						padding-bottom: 1rem;
+						font-size: 14px;
+					}
+						.testimonials-section .swiper .swiper-slide .card-right .card-icons img {
+							width: 15px;
+						}
+
+			.testimonials-section .swiper .swiper-button-next,
+			.testimonials-section .swiper .swiper-button-prev,
+			.testimonials-section .swiper .swiper-pagination {
+				color: #e2e0e0;
+			}
+}
+
 /* ---------------------------Home - TESTIMONIALS SECTION ----------------------------- */
 .contact-container {
 	position: relative;
@@ -1056,6 +1136,19 @@ nav .nav-container {
 			height: 200px;
 		}
 	}
+@media screen and (max-width: 880px) {
+	.contact-container {
+		position: relative;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 30px;
+		margin: 1rem auto;
+	}
+}
 
 /* --------------------------- Restaurants SECTION ----------------------------- */
 .container-fluid {
@@ -1135,6 +1228,36 @@ nav .nav-container {
 					transform: rotate(10deg);
 					z-index: 0;
 				}
+@media screen and (max-width: 768px) {
+	.welcoming-section_info {
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: center;
+	}
+
+		.welcoming-section_info .img-container {
+			flex: 0;
+		}
+
+			.welcoming-section_info .img-container img {
+				height: 20rem;
+				box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2)
+			}
+
+				.welcoming-section_info .img-container img:nth-child(1) {
+					position: absolute;
+					top: 0%;
+					left: 35%;
+					z-index: 1;
+				}
+				.welcoming-section_info .img-container img:nth-child(2) {
+					position: absolute;
+					top: 7%;
+					left: 48%;
+					transform: rotate(10deg);
+					z-index: 0;
+				}
+}
 
 .restaurants-section {
 	margin: 3rem 0;
@@ -1235,6 +1358,9 @@ nav .nav-container {
 				font-size: 16px;
 				line-height: 110%;
 			}
+			.container-fluid .restaurants-section h2 {
+				font-size: 1.3em;
+			}
 			.container-fluid .restaurants-section .restaurants-container {
 				flex-direction: column;
 				margin-left: 0;
@@ -1242,6 +1368,10 @@ nav .nav-container {
 			.container-fluid .restaurants-section .restaurants-side {
 				width: 90%;
 			}
+
+				.container-fluid .restaurants-section .restaurants-side p {
+					font-size: 15px;
+				}
 			.container-fluid .restaurants-section .cascais-restaurant {
 				padding-top: 0;
 			}
@@ -1362,6 +1492,9 @@ nav .nav-container {
 .groups .heading-2 {
 	color: rgb(114, 99, 89);
 }
+.plans-section {
+	margin-bottom: 1rem;
+}
 /* Menu SECTION MEDIA QUERY */
 
 @media screen and (min-width: 992px) {
@@ -1417,8 +1550,15 @@ nav .nav-container {
 }
 
 .brunch-menu h2 {
-		margin-bottom: 1rem;
+		margin-bottom: 1rem
 	}
+
+@media screen and (max-width: 992px) {
+
+	.brunch-menu h2 {
+			line-height: 25px
+	}
+		}
 .menu-container {
 	display: flex;
 	flex-direction: column;
@@ -1542,18 +1682,41 @@ nav .nav-container {
 					padding-bottom: 2rem;
 				}
 @media screen and (max-width: 992px) {
+			.specials-section .specials-section .heading-2 {
+				padding-top: 1rem;
+				margin-bottom: 1rem;
+			}
+
 		.specials-section .special-brunch {
 			display: grid;
 			grid-template-columns: 1fr;
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 1rem;
+			grid-gap: 10px;
+			gap: 10px;
 		}
 
 			.specials-section .special-brunch .brunch-card {
 				margin-left: auto;
 				margin-right: auto;
 			}
+	.specials-section {
+		margin: 1rem;
+	}
+	.specials-section .specials-heading .heading-2 {
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+	.specials-section .specials-heading p {
+		margin-bottom: 1rem;
+	}
+	.specials-section .heading-2 {
+		padding-top: 2rem;
+	}
+	.specials-section .specials-heading {
+		max-width: 95%;
+	}
 }
 
 /* --------------------------- KEYFRAMES SECTION ----------------------------- */

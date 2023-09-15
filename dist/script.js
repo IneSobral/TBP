@@ -1,3 +1,5 @@
+// Alterar entre versão em PT e EN
+
 const browserLanguage = navigator.language.toLowerCase();
 
 const supportedLanguages = {
@@ -10,7 +12,7 @@ if (browserLanguage in supportedLanguages) {
 	window.location.href = homepage;
 }
 
-// Set the language links' active state based on the current page
+// Escolher o idioma de acordo com o link que está activo
 document.addEventListener('DOMContentLoaded', function () {
 	const languageLinks = document.querySelectorAll('.nav-language a span');
 	const languageLinksMobile = document.querySelectorAll(
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const ptLinkMobile = languageLinksMobile[1];
 
 	const currentPath = window.location.pathname;
-	if (currentPath === '/') {
+	if (currentPath === '/' || currentPath === 'https://tbpower.netlify.app/') {
 		return (currentPath = '/index.html');
 	}
 	console.log(currentPath);
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			window.location.href = targetPage;
 		});
 	});
-
+	//Funcionalidade do menu para a versão em mobile
 	const hamburgerMenu = document.querySelector('.hamburger-menu');
 	const mobileMenu = document.querySelector('.menu-mobile');
 	const navMenu = document.querySelector('.nav-left');
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-//Cookie policy
+//Aceitar a política de cookies - Cookie policy
 function hideCookiePolicy() {
 	var cookiePolicy = document.getElementById('cookiepolicy');
 	cookiePolicy.style.display = 'none';
@@ -96,15 +98,54 @@ function hideCookiePolicy() {
 	websiteContent.style.filter = 'none';
 }
 
-// Function to show the cookie policy on page load
+// Funcionalidade para mostrar a política de cookies no load da página
 function showCookiePolicy() {
 	var cookiePolicy = document.getElementById('cookiepolicy');
 	cookiePolicy.style.display = 'block';
 }
 
-// Attach a click event handler to the "Accept" button
+// Adicionar o click event ao botão de Aceitar
 var acceptButton = document.getElementById('cookieconfirm');
 acceptButton.addEventListener('click', hideCookiePolicy);
 
-// Show the cookie policy when the page loads
+// Fazer a função funcionar no load
 window.addEventListener('load', showCookiePolicy);
+
+//Funcionalidade do Swiper js - dekstop mostrar 3 cards e em mobile mostrar 1, incluí setas de navegação
+let swiper = new Swiper('.mySwiper', {
+	cssMode: true,
+	slidesPerView: 1,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+	},
+	mousewheel: true,
+	keyboard: true,
+
+	breakpoints: {
+		920: {
+			slidesPerView: 3,
+			spaceBetween: 10,
+		},
+	},
+});
+
+//Funcionalidade da dropdown para mostrar o conteúdo ao click
+const menuItems = document.querySelectorAll('.menu-item');
+
+menuItems.forEach((menuItem) => {
+	const menuTitle = menuItem.querySelector('.menu-title');
+	const dropdownArrow = menuItem.querySelector('.dropdown-arrow');
+	const menuContent = menuItem.querySelector('.menu-content');
+
+	menuTitle.addEventListener('click', function () {
+		menuContent.classList.toggle('show');
+		dropdownArrow.innerText = menuContent.classList.contains('show')
+			? '-'
+			: '+';
+	});
+});

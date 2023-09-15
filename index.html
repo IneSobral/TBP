@@ -144,20 +144,20 @@
 				<!-- Desktop Menu -->
 				<ul class="menu-desktop">
 					<li class="heading-menu">
-						<a href="/en/restaurante.html">Restaurantes</a>
+						<a href="/en/restaurante.html">Restaurants</a>
 					</li>
 					<li class="heading-menu">
-						<a href="/en/especialidades.html">Espacialidades</a>
+						<a href="/en/especialidades.html">Specialities</a>
 					</li>
 					<li class="heading-menu">
 						<a href="/en/menu.html">Menu</a>
 					</li>
 					<li class="heading-menu">
-						<a href="/en/grupos.html">Grupos</a>
+						<a href="/en/grupos.html">Groups</a>
 					</li>
 					<li class="heading-menu">
 						<a href="/en/reservas.html">
-							<div class="btn-menu">Reservas</div>
+							<div class="btn-menu">Book now</div>
 						</a>
 					</li>
 					<li class="nav-language">
@@ -561,9 +561,9 @@
 		<script src="/dist/script.js"></script>
 		<!-- Initialize Swiper -->
 		<script>
-			var swiper = new Swiper('.mySwiper', {
+			let swiper = new Swiper('.mySwiper', {
 				cssMode: true,
-				slidesPerView: 3,
+				slidesPerView: 1,
 				spaceBetween: 10,
 				navigation: {
 					nextEl: '.swiper-button-next',
@@ -574,6 +574,13 @@
 				},
 				mousewheel: true,
 				keyboard: true,
+
+				breakpoints: {
+					920: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+				},
 			});
 		</script>
 	</body>
