@@ -1,5 +1,3 @@
-// Alterar entre versão em PT e EN
-
 const browserLanguage = navigator.language.toLowerCase();
 
 const supportedLanguages = {
@@ -133,20 +131,4 @@ let swiper = new Swiper('.mySwiper', {
 			spaceBetween: 10,
 		},
 	},
-});
-
-//Funcionalidade da dropdown para mostrar o conteúdo ao click
-const menuItems = document.querySelectorAll('.menu-item');
-
-menuItems.forEach((menuItem) => {
-	const menuTitle = menuItem.querySelector('.menu-title');
-	const dropdownArrow = menuItem.querySelector('.dropdown-arrow');
-	const menuContent = menuItem.querySelector('.menu-content');
-
-	menuTitle.addEventListener('click', function () {
-		menuContent.classList.toggle('show');
-		dropdownArrow.innerText = menuContent.classList.contains('show')
-			? '-'
-			: '+';
-	});
 });
