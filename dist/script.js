@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	const ptLinkMobile = languageLinksMobile[1];
 
 	let currentPath = window.location.pathname;
-	console.log(currentPath);
-	if (currentPath === '/' || currentPath === 'https://tbpower.netlify.app/') {
-		return (currentPath = 'https://tbpower.netlify.app/index.html');
+
+	if (currentPath === '/' || currentPath === '/index.html') {
+		return (window.location.href = 'https://tbpower.netlify.app/index.html');
 	}
 	console.log(currentPath);
 	const isPT =
