@@ -201,7 +201,7 @@ nav {
 		}
 
 		& .nav-logo {
-			padding-right: 1rem;
+			padding-right: 0;
 
 			span {
 				font-weight: bold;
@@ -1196,6 +1196,7 @@ nav {
 	.restaurants-img {
 		width: 300px;
 		height: 400px;
+		object-fit: cover;
 	}
 	.restaurants-side {
 		width: 60%;

@@ -211,7 +211,7 @@ nav .nav-container .nav-left {
 		}
 
 nav .nav-container .nav-logo {
-			padding-right: 1rem;
+			padding-right: 0;
 		}
 
 nav .nav-container .nav-logo span {
@@ -1267,6 +1267,8 @@ nav .nav-container {
 .restaurants-section .restaurants-img {
 		width: 300px;
 		height: 400px;
+		-o-object-fit: cover;
+		   object-fit: cover;
 	}
 
 .restaurants-section .restaurants-side {
