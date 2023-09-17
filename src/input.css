@@ -263,7 +263,7 @@ nav {
 			list-style: none;
 			padding-top: 8rem;
 			background-color: var(--dark-blue);
-			z-index: 5;
+			z-index: 5000;
 
 			& .nav-drop-item {
 				background-color: var(--dark-blue);

@@ -289,7 +289,7 @@ nav .nav-container .menu-mobile.active {
 			padding-top: 8rem;
 			background-color: #ece1dc;
 			background-color: var(--dark-blue);
-			z-index: 5
+			z-index: 5000
 		}
 
 nav .nav-container .menu-mobile.active .nav-drop-item {
