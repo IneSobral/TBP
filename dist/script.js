@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let currentPath = window.location.pathname;
 
-	if (currentPath === '/' || currentPath === '/index.html') {
+	if (currentPath === '/') {
 		return (window.location.href = 'https://tbpower.netlify.app/index.html');
 	}
 	console.log(currentPath);
