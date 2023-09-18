@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			} else {
 				if (!isPT) {
 					// Append "-pt" to the end of the URL
-					if (targetPage === '/index.html') {
-						targetPage = '/index-pt.html';
+					if (targetPage.endsWith('.html')) {
+						targetPage = targetPage.replace('.html', '-pt.html');
 					} else {
 						targetPage = targetPage + '-pt';
 					}
