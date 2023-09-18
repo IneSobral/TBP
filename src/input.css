@@ -13,13 +13,12 @@
 	font-style: normal;
 }
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 :root {
-	--dark-blue: #ece1dc;
-	--purple: #c25555;
-	--white: #0b0a0a;
-	--orange: #850707;
+	--pale: #ece1dc;
+	--orange: #c25555;
+	--dark: #0b0a0a;
+	--red: #850707;
 	--btn-hover: #e5d6d69d;
 	--text-dark: #333333;
 
@@ -46,7 +45,7 @@ html {
 }
 
 body {
-	background-color: var(--dark-blue);
+	background-color: var(--pale);
 	margin: 0;
 }
 
@@ -57,7 +56,7 @@ p {
 
 .btn {
 	max-width: 220px;
-	border: 0.75px solid var(--white);
+	border: 0.75px solid var(--dark);
 	color: white;
 	background-color: transparent;
 	padding: 15px 38px;
@@ -67,7 +66,7 @@ p {
 }
 
 .btn-menu {
-	border: 2px solid var(--purple);
+	border: 2px solid var(--orange);
 	padding: 15px 25px;
 	border-radius: 60px;
 	font-weight: 600;
@@ -79,7 +78,7 @@ p {
 }
 .btn-arrow {
 	text-decoration: none;
-	color: var(--purple);
+	color: var(--orange);
 	display: flex;
 	align-items: center;
 
@@ -87,19 +86,19 @@ p {
 		margin-left: 15px;
 		font-size: 17px;
 		font-weight: 500;
-		color: var(--purple);
+		color: var(--orange);
 	}
 }
 
 .btn-website {
 	font-size: 17px;
-	color: var(--purple);
+	color: var(--orange);
 	border-radius: 100px;
 	padding: 15px 25px;
 	margin: 5rem auto !important;
 	transition: background 0.5s;
 	background: transparent;
-	border: solid 1px var(--purple);
+	border: solid 1px var(--orange);
 	outline: none;
 }
 
@@ -171,7 +170,7 @@ p {
 }
 
 .bg-dark {
-	background-color: var(--orange);
+	background-color: var(--red);
 }
 /* MAP SETUP */
 #map {
@@ -207,7 +206,7 @@ nav {
 				font-weight: bold;
 				font-family: 'Courier New', Courier, monospace;
 				font-size: 1.8rem;
-				color: var(--white);
+				color: var(--dark);
 			}
 		}
 
@@ -221,13 +220,13 @@ nav {
 				margin: 0.2rem 0.2rem;
 			}
 			& li a:hover svg {
-				fill: var(--purple);
+				fill: var(--orange);
 			}
 			& li a:hover svg rect {
-				stroke: var(--white);
+				stroke: var(--dark);
 			}
 			& li a:hover svg path {
-				fill: var(--white);
+				fill: var(--dark);
 			}
 		}
 		/* Navbar Mobile */
@@ -262,43 +261,43 @@ nav {
 			left: 0;
 			list-style: none;
 			padding-top: 8rem;
-			background-color: var(--dark-blue);
+			background-color: var(--pale);
 			z-index: 5000;
 
 			& .nav-drop-item {
-				background-color: var(--dark-blue);
+				background-color: var(--pale);
 			}
 
 			& .nav-drop-item a {
 				text-decoration: none;
-				color: var(--orange);
+				color: var(--red);
 				font-size: 16px;
 			}
 			& .nav-drop-item a:hover {
-				color: var(--purple);
+				color: var(--orange);
 			}
 			& .nav-language_container {
 				font-size: 18px;
 				padding-top: 2rem;
 
 				& a {
-					color: var(--white);
+					color: var(--dark);
 					text-decoration: none;
 
 					/* Nav Language PT/EN + hover effect */
 					&:nth-child(1)::after {
 						content: '|';
 						margin: 0 8px;
-						color: var(--white);
+						color: var(--dark);
 					}
 					& span {
-						color: var(--white);
+						color: var(--dark);
 					}
 					& span:hover {
-						color: var(--purple);
+						color: var(--orange);
 					}
 					& span.selected {
-						color: var(--purple);
+						color: var(--orange);
 					}
 				}
 			}
@@ -324,7 +323,7 @@ nav {
 					height: 2px;
 					position: absolute;
 					top: 0px;
-					background-color: var(--white);
+					background-color: var(--dark);
 					margin: 5px 0;
 					border-radius: 5px;
 					transition: transform 0.5s ease 0s, top 0.5s ease 0s;
@@ -372,17 +371,17 @@ nav {
 				}
 				& .heading-menu a {
 					text-decoration: none;
-					color: var(--white);
+					color: var(--dark);
 					font-size: 17px;
 					line-height: 20px;
 					transition: color 0.3s ease;
 					letter-spacing: 1px;
 
 					&:hover {
-						color: var(--purple);
+						color: var(--orange);
 					}
 					&.active {
-						color: var(--purple);
+						color: var(--orange);
 					}
 				}
 
@@ -393,18 +392,18 @@ nav {
 					&:nth-child(1)::after {
 						content: '|';
 						margin: 0 8px;
-						color: var(--white);
+						color: var(--dark);
 					}
 					& span {
-						color: var(--white);
+						color: var(--dark);
 					}
 					& span.selected {
-						color: var(--purple);
+						color: var(--orange);
 					}
 				}
 
 				& .btn-menu {
-					color: var(--purple);
+					color: var(--orange);
 
 					& .new-btn {
 						border: 2px solid #ed860d;
@@ -416,7 +415,7 @@ nav {
 						letter-spacing: 1px;
 						width: 65px;
 						height: 25px;
-						color: var(--orange);
+						color: var(--red);
 						display: inline-flex;
 						align-items: center;
 						justify-content: center;
@@ -544,7 +543,7 @@ nav {
 			align-items: center;
 			gap: 1rem;
 			& h3 {
-				color: var(--purple);
+				color: var(--orange);
 			}
 			& p {
 				font-size: 16px;
@@ -554,11 +553,11 @@ nav {
 				padding: 0.8rem 0;
 			}
 			& a {
-				color: var(--orange);
-				border: 2px solid var(--orange);
+				color: var(--red);
+				border: 2px solid var(--red);
 
 				&:hover {
-					background-color: var(--orange);
+					background-color: var(--red);
 					color: white;
 				}
 			}
@@ -589,7 +588,7 @@ nav {
 			.about-main_left {
 				padding-top: 2rem;
 				& h3 {
-					color: var(--purple);
+					color: var(--orange);
 					text-align: left;
 				}
 				& p {
@@ -644,7 +643,7 @@ nav {
 					font-family: 'Roboto', sans-serif;
 					font-weight: 700;
 					text-transform: uppercase;
-					color: var(--orange);
+					color: var(--red);
 					text-shadow: 2px 2px 3px pink;
 				}
 			}
@@ -686,7 +685,7 @@ nav {
 					span {
 						font-weight: bold;
 						text-transform: uppercase;
-						color: var(--purple);
+						color: var(--orange);
 					}
 				}
 			}
@@ -729,11 +728,11 @@ nav {
 				}
 
 				a {
-					color: var(--orange);
-					border: 2px solid var(--orange);
+					color: var(--red);
+					border: 2px solid var(--red);
 
 					&:hover {
-						background-color: var(--orange);
+						background-color: var(--red);
 						color: white;
 					}
 				}
@@ -773,11 +772,11 @@ nav {
 					}
 
 					a {
-						color: var(--orange);
-						border: 2px solid var(--orange);
+						color: var(--red);
+						border: 2px solid var(--red);
 
 						&:hover {
-							background-color: var(--orange);
+							background-color: var(--red);
 							color: white;
 						}
 					}
@@ -863,18 +862,17 @@ nav {
 }
 
 .swiper.mySwiper .swiper-pagination-bullet {
-	width: 10px; /* Customize the width */
-	height: 10px; /* Customize the height */
-	background-color: #ffffff; /* Customize the background color */
-	opacity: 0.5; /* Customize the opacity */
-	border-radius: 50%; /* Customize the bullet shape */
-	margin: 0 5px; /* Customize the spacing between bullets */
+	width: 10px;
+	height: 10px;
+	background-color: #ffffff;
+	opacity: 0.5;
+	border-radius: 50%;
+	margin: 0 5px;
 }
 
-/* Customize the active bullet style */
 .swiper.mySwiper .swiper-pagination-bullet-active {
-	background-color: rgb(233, 221, 221); /* Customize the active bullet color */
-	opacity: 1; /* Customize the active bullet opacity */
+	background-color: rgb(233, 221, 221);
+	opacity: 1;
 }
 
 @media screen and (max-width: 880px) {
@@ -1021,7 +1019,7 @@ nav {
 		height: 4px;
 		width: 50px;
 		border-radius: 2px;
-		background-color: var(--orange);
+		background-color: var(--red);
 	}
 
 	.field {
@@ -1046,7 +1044,7 @@ nav {
 	.btn {
 		width: 100%;
 		padding: 0.5rem 1rem;
-		background-color: var(--orange);
+		background-color: var(--red);
 		color: #fff;
 		font-size: 1.1rem;
 		border: none;
@@ -1056,11 +1054,11 @@ nav {
 	}
 
 	.btn:hover {
-		background-color: var(--purple);
+		background-color: var(--orange);
 	}
 
 	.field:focus {
-		border: 2px solid var(--purple);
+		border: 2px solid var(--orange);
 		background-color: #fff;
 	}
 
@@ -1097,7 +1095,7 @@ nav {
 	margin: 3rem 0;
 	height: 65vh;
 	h2 {
-		color: var(--purple);
+		color: var(--orange);
 		padding-bottom: 3rem;
 
 		&::after {
@@ -1105,7 +1103,7 @@ nav {
 			display: block;
 			width: 90%;
 			height: 2px;
-			background-color: var(--purple);
+			background-color: var(--orange);
 		}
 	}
 	h5 {
@@ -1212,7 +1210,7 @@ nav {
 	}
 
 	h2 {
-		color: var(--purple);
+		color: var(--orange);
 		padding: 3rem 0;
 
 		&::after {
@@ -1220,7 +1218,7 @@ nav {
 			display: block;
 			width: 90%;
 			height: 2px;
-			background-color: var(--purple);
+			background-color: var(--orange);
 		}
 	}
 	h4 {
@@ -1251,7 +1249,7 @@ nav {
 		}
 	}
 	.special-brunch {
-		border: 1px solid var(--orange);
+		border: 1px solid var(--red);
 		background-color: transparent;
 		color: #333333;
 		text-align: center;
@@ -1372,7 +1370,7 @@ nav {
 
 			& .content:hover {
 				.title {
-					background-color: var(--orange);
+					background-color: var(--red);
 				}
 			}
 
@@ -1389,7 +1387,7 @@ nav {
 					font-size: 17px;
 					line-height: 19px;
 					text-align: center;
-					color: var(--purple);
+					color: var(--orange);
 					outline: none;
 					padding-left: 0.5rem;
 				}
@@ -1409,17 +1407,17 @@ nav {
 	margin: 3rem auto 4rem auto;
 
 	& a {
-		border: 2px solid var(--purple);
+		border: 2px solid var(--orange);
 		border-radius: 60px;
 		padding: 15px 25px;
-		color: var(--purple);
+		color: var(--orange);
 		text-decoration: none;
 		font-weight: 600;
 		letter-spacing: 1px;
 
 		&:hover {
 			color: #e2e0e0;
-			background-color: var(--purple);
+			background-color: var(--orange);
 		}
 	}
 }
@@ -1587,7 +1585,7 @@ nav {
 		margin-inline: auto;
 
 		.heading-2 {
-			color: var(--white);
+			color: var(--dark);
 			text-align: center;
 			margin-bottom: 2rem;
 		}
@@ -1622,7 +1620,7 @@ nav {
 			width: 350px;
 			height: 325px;
 			border-radius: 10px;
-			background-color: var(--purple);
+			background-color: var(--orange);
 
 			.default-card {
 				object-fit: contain;
@@ -1792,124 +1790,6 @@ nav {
 	}
 }
 
-/* --------------------------- WP Performance SECTION ----------------------------- */
-
-.wp-performance_section {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-	gap: 3rem;
-	margin-left: 0.5rem;
-
-	& h2 {
-		font-size: 24px;
-		margin-bottom: 2rem;
-	}
-	& p {
-		line-height: 160%;
-		font-weight: 200;
-	}
-
-	& .wp-ul {
-		list-style: disc;
-		padding-left: 1rem;
-		margin: 1rem 0;
-		width: 95%;
-
-		& li {
-			line-height: 170%;
-			font-weight: 200;
-			width: 100%;
-			padding: 0;
-			margin: 0;
-			max-width: 37rem;
-			word-break: break-word;
-		}
-	}
-
-	& iframe {
-		width: 350px;
-		padding-left: 0;
-		margin-left: -2rem;
-	}
-
-	& .btn-wide {
-		margin-top: 2.5rem;
-		width: 90%;
-
-		display: flex;
-		justify-content: space-evenly;
-
-		& a {
-			& .btn {
-				border: 0.75px solid #ffffff;
-				color: var(--white);
-				background: transparent;
-				padding: 20px 25px;
-				border-radius: 100px;
-				outline: 0;
-				font-size: 18px;
-				cursor: pointer;
-				margin-top: 0.5rem;
-				margin-left: 0.8rem;
-				max-width: fit-content;
-
-				&:hover {
-					color: var(--purple);
-					border-color: var(--purple);
-				}
-			}
-		}
-	}
-}
-/* WP PERFORMANCE SECTION MEDIA QUERY */
-
-@media (min-width: 992px) and (max-width: 1500px) {
-	.wp-performance_section {
-		& iframe {
-			width: 420px;
-		}
-	}
-}
-@media screen and (min-width: 1501px) {
-	.wp-performance_section {
-		& iframe {
-			width: 580px;
-		}
-	}
-}
-
-@media screen and (min-width: 992px) {
-	.wp-performance_section {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		width: 100%;
-		gap: 5rem;
-		margin-top: 4rem;
-		padding-left: 0;
-		max-width: 90%;
-
-		& h2 {
-			font-size: 36px;
-			line-height: 43px;
-			margin-bottom: 2rem;
-		}
-		& p {
-			line-height: 43px;
-		}
-		& ul {
-			padding-left: 2.2rem;
-
-			& li {
-				line-height: 28px;
-				width: 28rem;
-			}
-		}
-	}
-}
-
 /* --------------------------- CONTACT US SECTION ----------------------------- */
 
 .contact-info {
@@ -1942,7 +1822,7 @@ nav {
 
 	& .btn-arrow a {
 		text-decoration: none;
-		color: var(--purple);
+		color: var(--orange);
 	}
 }
 
@@ -1990,7 +1870,7 @@ nav {
 
 		& .btn-arrow a {
 			text-decoration: none;
-			color: var(--purple);
+			color: var(--orange);
 		}
 	}
 }
@@ -2012,7 +1892,7 @@ nav {
 			& .btn-arrow {
 				background-color: transparent;
 				border: none;
-				color: var(--white);
+				color: var(--dark);
 			}
 		}
 	}
@@ -2083,7 +1963,7 @@ nav {
 			margin: 0;
 			gap: 10px;
 			text-decoration: none;
-			color: var(--white);
+			color: var(--dark);
 
 			width: 100%;
 
@@ -2133,7 +2013,7 @@ nav {
 		& .btn-arrow {
 			background-color: transparent;
 			border: none;
-			color: var(--white);
+			color: var(--dark);
 		}
 	}
 }
@@ -2181,7 +2061,7 @@ nav {
 			margin-bottom: 15px;
 			text-align: center;
 			text-decoration: none;
-			color: var(--white);
+			color: var(--dark);
 		}
 	}
 }
@@ -2257,8 +2137,8 @@ nav {
 				& button {
 					width: 150px;
 					height: 50px;
-					border: 2px solid var(--purple);
-					color: var(--purple);
+					border: 2px solid var(--orange);
+					color: var(--orange);
 					border-radius: 100px;
 					background: transparent;
 					margin-top: 20px;
@@ -2368,8 +2248,8 @@ nav {
 					& button {
 						width: 150px;
 						height: 50px;
-						border: 2px solid var(--purple);
-						color: var(--purple);
+						border: 2px solid var(--orange);
+						color: var(--orange);
 						border-radius: 100px;
 						background: transparent;
 						margin-left: 0.3rem;
@@ -2468,7 +2348,7 @@ nav {
 .reservation-page {
 	.map-section {
 		.heading-1 {
-			color: var(--white);
+			color: var(--dark);
 			text-align: center;
 			margin: 3rem auto 1rem auto;
 			line-height: 40px;
@@ -2489,7 +2369,7 @@ nav {
 
 /*------------------------------------------------ Footer ----------------------------------------------------------------------------------*/
 .footer {
-	background-color: var(--orange);
+	background-color: var(--red);
 	color: #ffffff;
 	display: flex;
 	flex-direction: column;
@@ -2642,7 +2522,7 @@ nav {
 
 	.cookie-btn {
 		.btn-accept {
-			color: var(--orange);
+			color: var(--red);
 			border: 1px solid #850707;
 			border-radius: 35px;
 			padding: 10px 15px;
@@ -2680,7 +2560,7 @@ nav {
 
 		.cookie-btn {
 			.btn-accept {
-				color: var(--orange);
+				color: var(--red);
 				border: 1px solid #850707;
 				border-radius: 35px;
 				padding: 10px 15px;
