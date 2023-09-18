@@ -27,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		return (window.location.href = 'https://tbpower.netlify.app/index.html');
 	}
 	console.log(currentPath);
-	const isPT =
-		currentPath.includes('/pt/') || currentPath.includes('index-pt.html');
+	const isPT = currentPath.includes('/pt/') || currentPath.includes('index-pt');
 
 	if (isPT) {
 		ptLink.classList.add('selected');
