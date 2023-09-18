@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			} else {
 				if (!isPT) {
-					targetPage = currentPath.replace('/en/', '/pt/');
+					targetPage = currentPath.replace('/en/', '/pt/').replace('', '-pt');
 				} else {
 					targetPage = currentPath.replace('/index.html', '/index-pt.html');
 				}
