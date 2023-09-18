@@ -38,30 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		enLinkMobile.classList.add('selected');
 	}
 
-	languageLinks.forEach(function (link) {
-		link.addEventListener('click', function (event) {
-			event.preventDefault();
-
-			const targetLanguage = link.innerText.trim();
-			let targetPage = '';
-
-			if (targetLanguage === 'EN') {
-				if (isPT) {
-					targetPage = currentPath.replace('/pt/', '/en/').replace('-pt', '');
-				} else {
-					targetPage = currentPath.replace('/index-pt.html', '/index.html');
-				}
-			} else {
-				if (!isPT) {
-					targetPage = currentPath.replace('/en/', '/pt/').add('-pt');
-				} else {
-					targetPage = currentPath.replace('/index.html', '/index-pt.html');
-				}
-			}
-
-			window.location.href = targetPage;
-		});
-	});
+	languageLinks.forEach(function (link) {});
 	//Funcionalidade do menu para a versão em mobile
 	const hamburgerMenu = document.querySelector('.hamburger-menu');
 	const mobileMenu = document.querySelector('.menu-mobile');
