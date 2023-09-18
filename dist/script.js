@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (!isPT) {
 					targetPage = currentPath
 						.replace('/en/', '/pt/')
-						.replace('.html', '-pt.html');
+						.replace(/\.html$/, '-pt.html');
 				} else {
 					targetPage = currentPath.replace('/index.html', '/index-pt.html');
 				}
