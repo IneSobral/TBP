@@ -1479,6 +1479,7 @@ nav .nav-container {
 	text-align: center;
 	font-size: 20px;
 	color: rgb(114, 99, 89);
+	padding: auto 1rem;
 }
 .reservation-btn {
 	text-align: center;
@@ -1504,11 +1505,56 @@ nav .nav-container {
 .groups .heading-2 {
 	color: rgb(114, 99, 89);
 }
+.groups .heading-3 {
+	padding: 0 2rem;
+}
 .plans-section {
 	margin-bottom: 1rem;
 }
-/* Menu SECTION MEDIA QUERY */
-
+/* MENU SECTION  */
+.menu-img {
+	width: auto;
+	height: 15rem;
+	background-image: url(/dist/assets/menu.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.groups .plans-section .menu-img {
+	width: 80vw;
+	height: 20rem;
+	background-image: url(/dist/assets/group-1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.plans-section {
+	padding: 20px;
+	margin-top: 50px;
+	padding-bottom: 50px
+}
+.plans-section .main-container {
+		padding: 0;
+	}
+.plans-section .header-plans h2 {
+		line-height: 40px;
+		text-align: center;
+		padding-bottom: 1rem;
+	}
+.plans-section .header-text {
+		text-align: center;
+		color: #0b0a0a;
+		padding: 2rem;
+	}
+.plans-section .plans-ul {
+		list-style: none;
+		margin-top: 90px;
+		flex: 1;
+		display: grid;
+		grid-gap: 10px;
+		gap: 10px;
+		grid-template-columns: repeat(1, 1fr);
+	}
 @media screen and (min-width: 992px) {
 	.menu-img {
 		width: 80vw;
@@ -1646,6 +1692,8 @@ nav .nav-container {
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 .specials-section .heading-2 {
