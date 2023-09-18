@@ -1159,30 +1159,39 @@ nav {
 	}
 }
 @media screen and (max-width: 768px) {
-	.welcoming-section_info {
-		flex-direction: column;
-		align-items: flex-start;
-		text-align: center;
+	.welcoming-section {
+		height: 100vh;
 
-		.img-container {
-			flex: 0;
+		.welcoming-section_info {
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: center;
 
-			img {
-				height: 20rem;
-				box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
+			.img-container {
+				flex: 0;
+				display: flex;
+				flex-direction: column;
 
-				&:nth-child(1) {
-					position: absolute;
-					top: 0%;
-					left: 35%;
-					z-index: 1;
-				}
-				&:nth-child(2) {
-					position: absolute;
-					top: 7%;
-					left: 48%;
-					transform: rotate(10deg);
-					z-index: 0;
+				img {
+					object-fit: cover;
+					flex-shrink: 0;
+					width: 180px;
+					height: 300px;
+					box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
+
+					&:nth-child(1) {
+						position: absolute;
+						top: 110%;
+						left: 9%;
+						z-index: 1;
+					}
+					&:nth-child(2) {
+						position: absolute;
+						top: 110%;
+						left: 30%;
+						transform: rotate(12deg);
+						z-index: 0;
+					}
 				}
 			}
 		}
