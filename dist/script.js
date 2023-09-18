@@ -53,14 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			} else {
 				if (!isPT) {
-					// Append "-pt" to the end of the URL
-					if (targetPage.endsWith('.html')) {
-						targetPage = targetPage.replace('.html', '-pt.html');
-					} else {
-						targetPage = targetPage + '-pt';
-					}
-				} else {
 					targetPage = currentPath.replace('/en/', '/pt/') + '-pt';
+				} else {
+					targetPage = currentPath.replace('/index.html', '/index-pt.html');
 				}
 			}
 
