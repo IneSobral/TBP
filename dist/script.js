@@ -106,33 +106,3 @@ let swiper = new Swiper('.mySwiper', {
 		},
 	},
 });
-
-// JavaScript to toggle card display on click and hover
-const brunchCards = document.querySelectorAll('.brunch-card');
-
-brunchCards.forEach((card) => {
-	card.addEventListener('click', () => {
-		toggleCard(card);
-	});
-
-	card.addEventListener('mouseenter', () => {
-		toggleCard(card);
-	});
-
-	card.addEventListener('mouseleave', () => {
-		toggleCard(card);
-	});
-});
-
-function toggleCard(card) {
-	const defaultCard = card.querySelector('.default-card');
-	const backCard = card.querySelector('.back-card');
-
-	if (defaultCard.style.display === 'none') {
-		defaultCard.style.display = 'block';
-		backCard.style.display = 'none';
-	} else {
-		defaultCard.style.display = 'none';
-		backCard.style.display = 'block';
-	}
-}
