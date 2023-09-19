@@ -1,17 +1,3 @@
-@font-face {
-	font-family: 'archiaregular';
-	src: url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.eot');
-	src: url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.eot?#iefix')
-			format('embedded-opentype'),
-		url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.woff2')
-			format('woff2'),
-		url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.woff')
-			format('woff'),
-		url('/src/Archia_Regular/Archia\ Regular\ Webfont/archia-regular-webfont.ttf')
-			format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 :root {
@@ -21,9 +7,6 @@
 	--red: #850707;
 	--btn-hover: #e5d6d69d;
 	--text-dark: #333333;
-
-	--lobster: 'Lobster Two', cursive;
-
 	--swiper-theme-color: #850707;
 }
 
