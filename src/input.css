@@ -491,7 +491,7 @@ nav {
 				font-size: 3rem;
 				line-height: 120%;
 			}
-			& h3 {
+			& .heading-02 {
 				padding-top: 0.7rem;
 				font-weight: 400;
 				font-size: 1.5rem;
@@ -2554,9 +2554,8 @@ nav {
 }
 
 /*------- Cookies Policy ------------*/
-
 .cookies {
-	margin-inline: 6rem;
+	margin-inline: 2rem;
 	.heading-2 {
 		color: #333333;
 	}
@@ -2571,5 +2570,25 @@ nav {
 	ul {
 		color: #333333;
 		padding-left: 1rem;
+	}
+}
+@media (min-width: 768px) {
+	.cookies {
+		margin-inline: 6rem;
+		.heading-2 {
+			color: #333333;
+		}
+		div p {
+			color: #333333;
+			margin: 1rem auto;
+		}
+		.heading-6 {
+			color: #333333;
+		}
+
+		ul {
+			color: #333333;
+			padding-left: 1rem;
+		}
 	}
 }

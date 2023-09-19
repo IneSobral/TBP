@@ -60,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+//
+//
 //Aceitar a política de cookies - Cookie policy
 function hideCookiePolicy() {
 	var cookiePolicy = document.getElementById('cookiepolicy');
@@ -84,6 +86,8 @@ acceptButton.addEventListener('click', hideCookiePolicy);
 // Fazer a função funcionar no load
 window.addEventListener('load', showCookiePolicy);
 
+//
+//
 //Funcionalidade do Swiper js - dekstop mostrar 3 cards e em mobile mostrar 1, incluí setas de navegação
 let swiper = new Swiper('.mySwiper', {
 	cssMode: true,
