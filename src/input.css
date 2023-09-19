@@ -641,7 +641,7 @@ nav {
 		text-align: center;
 
 		.brunch-container {
-			background-image: url(/dist/assets/brunch-img-quote.jpg);
+			background-image: url(/dist/assets/brunch-img-quote.jpeg);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -1462,7 +1462,7 @@ nav {
 	.menu-img {
 		width: 80vw;
 		height: 20rem;
-		background-image: url(/dist/assets/menu.jpg);
+		background-image: url(/dist/assets/menu.jpeg);
 		background-position: top;
 		background-repeat: no-repeat;
 		background-size: cover;
