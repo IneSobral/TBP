@@ -65,7 +65,7 @@ function hideCookiePolicy() {
 	var cookiePolicy = document.getElementById('cookiepolicy');
 	cookiePolicy.style.display = 'none';
 
-	// Make the website content fully visible
+	// Mostrar o website todo
 	var websiteContent = document.getElementById('website-content');
 	websiteContent.style.opacity = '1';
 	websiteContent.style.filter = 'none';
